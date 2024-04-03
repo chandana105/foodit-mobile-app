@@ -1,4 +1,4 @@
-import {Button, StyleSheet, View} from 'react-native';
+import {Button, Text, View} from 'react-native';
 import React from 'react';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '../App';
@@ -14,8 +14,7 @@ export default function Home({navigation}: HomeProps) {
           navigation.navigate('RestaurantDetails', {productId: '1'})
         }
       />
+      <Text className="font-bold text-red-700">hllo</Text>
     </View>
   );
 }
-
-const styles = StyleSheet.create({});
