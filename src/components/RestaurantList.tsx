@@ -1,35 +1,30 @@
-import {FlatList, Pressable} from 'react-native';
+import {FlatList, Pressable, Text} from 'react-native';
 import React, {PropsWithChildren} from 'react';
 import RestaurantCard from './RestaurantCard';
-
-const list = {
-  id: '1',
-  name: 'Burger King',
-  rating: '4.4',
-  time: '30-35 mins',
-  description: 'Burgers, American, Chinese',
-  costForTwo: '₹ 350 for two',
-};
-
-const restItems = Array.from({length: 10}, () => ({...list}));
-
-console.log({restItems});
+import useRestaurantsList from '../hooks/useRestaurantsList';
 
 type RestaurantListProps = PropsWithChildren<{
-  restaurantCardDetails: () => void;
+  restaurantCardDetails: (item: RestaurantItem) => void;
 }>;
 
 export default function RestaurantList({
   restaurantCardDetails,
 }: RestaurantListProps) {
-  return (
+  const {resList} = useRestaurantsList();
+
+  // console.log({resList}, 'list');
+
+  console.log(JSON.stringify(resList, null, 2));
+
+  return resList?.length === 0 ? (
+    <Text>Loading</Text>
+  ) : (
     <FlatList
-      data={restItems}
-      keyExtractor={item => item.id + 1}
-      renderItem={item => (
-        <Pressable onPress={restaurantCardDetails}>
-          <RestaurantCard />
-          {/* will put item as argument later */}
+      data={resList}
+      keyExtractor={item => item?.info.id}
+      renderItem={({item}) => (
+        <Pressable onPress={() => restaurantCardDetails(item)}>
+          <RestaurantCard resItem={item} />
         </Pressable>
       )}
     />

@@ -1,11 +1,15 @@
 import {Image, Text, View} from 'react-native';
-import React from 'react';
+import React, {PropsWithChildren} from 'react';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import IconDot from 'react-native-vector-icons/Entypo';
 
-export default function RestaurantCard() {
+type RestaurantCardProps = PropsWithChildren<{
+  resItem: RestaurantItem;
+}>;
+
+export default function RestaurantCard({resItem}: RestaurantCardProps) {
   return (
-    <View className=" m-4 p-1 flex flex-row h-44 border-[0.5px] border-zinc-200 rounded-lg ">
+    <View className="m-4 p-1 flex flex-row h-44 border-[0.5px] border-zinc-200 rounded-lg ">
       <View>
         <Image
           source={{
@@ -15,7 +19,9 @@ export default function RestaurantCard() {
         />
       </View>
       <View className="px-2 gap-2">
-        <Text className="font-bold text-xl text-black">Burger King</Text>
+        <Text className="font-bold text-xl text-black">
+          {resItem.info.name}
+        </Text>
         <View className="flex flex-row items-center">
           <Icon name="star-circle" size={25} color="#040" />
           <Text className="font-bold text-black ml-1">4.4</Text>

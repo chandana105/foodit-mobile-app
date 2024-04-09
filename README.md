@@ -7,3 +7,6 @@
   - header ( title and left and right btn )
   - search bar designing
   - top rated filter button designing
+  - Dummy flatlist of all restaurnats list on restaurnats list page
+  - fetching list of restaurants from api
+  - Shimmer UI 

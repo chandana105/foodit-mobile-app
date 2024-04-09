@@ -46,3 +46,8 @@ export default function App(): React.JSX.Element {
 }
 
 // TODO: is flatlist similar a thart of inifintescrolling in web ???
+// TODO: SNACKBAR ADD
+
+/**
+ * virtualized lists should never be nested insidde plain Scrollview with the amew iorintation biecoanuse it can break windiowing and other fucntionality, - use another virtualized backed container instead
+ */
