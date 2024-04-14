@@ -12,9 +12,7 @@ export default function RestaurantList({
 }: RestaurantListProps) {
   const {resList} = useRestaurantsList();
 
-  // console.log({resList}, 'list');
-
-  console.log(JSON.stringify(resList, null, 2));
+  // console.log(JSON.stringify(resList, null, 2));
 
   return resList?.length === 0 ? (
     <Text>Loading</Text>
