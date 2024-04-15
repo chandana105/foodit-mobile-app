@@ -1,4 +1,4 @@
-import {FlatList, Pressable, Text} from 'react-native';
+import {ActivityIndicator, FlatList, Pressable, Text} from 'react-native';
 import React, {PropsWithChildren} from 'react';
 import RestaurantCard from './RestaurantCard';
 import useRestaurantsList from '../hooks/useRestaurantsList';
@@ -15,7 +15,7 @@ export default function RestaurantList({
   // console.log(JSON.stringify(resList, null, 2));
 
   return resList?.length === 0 ? (
-    <Text>Loading</Text>
+    <ActivityIndicator />
   ) : (
     <FlatList
       data={resList}
