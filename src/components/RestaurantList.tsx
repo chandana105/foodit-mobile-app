@@ -1,25 +1,21 @@
-import {ActivityIndicator, FlatList, Pressable, Text} from 'react-native';
+import {FlatList, Pressable} from 'react-native';
 import React, {PropsWithChildren} from 'react';
 import RestaurantCard from './RestaurantCard';
-import useRestaurantsList from '../hooks/useRestaurantsList';
 
 type RestaurantListProps = PropsWithChildren<{
   restaurantCardDetails: (item: RestaurantItem) => void;
+  resList: RestaurantItem[];
 }>;
 
 export default function RestaurantList({
+  resList,
   restaurantCardDetails,
 }: RestaurantListProps) {
-  const {resList} = useRestaurantsList();
-
-  // console.log(JSON.stringify(resList, null, 2));
-
-  return resList?.length === 0 ? (
-    <ActivityIndicator />
-  ) : (
+  return (
     <FlatList
       data={resList}
       keyExtractor={item => item?.info.id}
+      className="my-4"
       renderItem={({item}) => (
         <Pressable onPress={() => restaurantCardDetails(item)}>
           <RestaurantCard resItem={item} />
@@ -28,5 +24,3 @@ export default function RestaurantList({
     />
   );
 }
-
-// here we ll render map (flatlist) on restuarnat cards

@@ -21,10 +21,6 @@ const useRestaurantsList = () => {
       cardsIndex = 2;
     }
 
-    // console.log({cardsIndex}, Platform.OS);
-
-    // console.log(JSON.stringify(json?.data?.cards[cardsIndex], null, 2), 'here');
-
     const restaurants =
       json?.data?.cards[cardsIndex]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants;
@@ -32,10 +28,6 @@ const useRestaurantsList = () => {
     if (restaurants) {
       setResList(restaurants);
     }
-
-    // console.log(JSON.stringify(json?.data, null, 2));
-
-    // console.log(JSON.stringify(json?.data?.cards[cardsIndex]?.card?.card, null, 2));
   };
 
   return {resList};

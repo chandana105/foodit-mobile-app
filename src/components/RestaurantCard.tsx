@@ -1,4 +1,4 @@
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, Text, View} from 'react-native';
 import React, {PropsWithChildren} from 'react';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import IconDot from 'react-native-vector-icons/Entypo';

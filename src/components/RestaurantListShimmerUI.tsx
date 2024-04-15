@@ -14,14 +14,12 @@ export default function RestaurantListShimmerUI() {
       <ShimmerPlaceHolder
         shimmerColors={shimmerColors}
         style={styles.searchBar}
-        // className="rounded-lg  m-4 flex flex-row items-center bg-slate-200 pr-2 p-4 w-11/12"
       />
 
       {/* // Top Rated Restaurants Shimmer UI */}
       <ShimmerPlaceHolder
         shimmerColors={shimmerColors}
         style={styles.filterButton}
-        // className="bg-slate-200 m-auto rounded-lg p-3 w-2/4"
       />
 
       {/* RESTAURNAT CARD SHIMMER UI */}
@@ -30,33 +28,27 @@ export default function RestaurantListShimmerUI() {
         renderItem={({index}) => (
           <View
             className="m-4 p-1 py-2  flex-row h-48 rounded-lg border-[0.5px] border-slate-200 shadow-sm bg-white "
-            // style={styles.cardContainer}
             key={index}>
             <ShimmerPlaceHolder
               shimmerColors={shimmerColors}
-              //   className="rounded-lg bg-slate-200"
               style={styles.cardImageContainer}
             />
 
             <View className="rounded-md px-2 gap-1 flex flex-col">
               <ShimmerPlaceHolder
                 shimmerColors={shimmerColors}
-                // className="rounded-md p-3 w-44 bg-slate-200"
                 style={styles.cardInfo}
               />
               <ShimmerPlaceHolder
                 shimmerColors={shimmerColors}
-                // className="rounded-md p-3 w-44 bg-slate-200"
                 style={[styles.cardInfo, styles.cardDescription]}
               />
               <ShimmerPlaceHolder
                 shimmerColors={shimmerColors}
-                // className="rounded-md mt-4 p-7 w-44 bg-slate-200"
                 style={styles.cardInfo}
               />
               <ShimmerPlaceHolder
                 shimmerColors={shimmerColors}
-                // className="rounded-md p-3 w-44 bg-slate-200"
                 style={styles.cardInfo}
               />
             </View>
@@ -95,6 +87,4 @@ const styles = StyleSheet.create({
   cardDescription: {
     height: '25%',
   },
-  cardCuisines: {},
-  cardPrice: {},
 });
