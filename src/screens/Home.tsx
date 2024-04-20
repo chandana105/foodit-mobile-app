@@ -11,7 +11,10 @@ type HomeProps = NativeStackScreenProps<RootStackParamList, 'Home'>;
 
 export default function Home({navigation}: HomeProps) {
   const restaurantCardDetails = (item: RestaurantItem) =>
-    navigation.navigate('RestaurantDetails', {productId: item.info.id});
+    navigation.navigate('RestaurantDetails', {
+      resId: item.info.id,
+      cloudinaryImageId: '',
+    });
 
   const {resList, filteredResList, setFilteredResList} = useRestaurantsList();
 

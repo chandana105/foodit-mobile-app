@@ -1,0 +1,1843 @@
+// ios menu
+{
+  "statusMessage": "done successfully",
+  "cards": [
+    {
+      "card": {
+        "card": {
+          "@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.TextBoxV2",
+          "text": "IGP sweets",
+          "headerStyling": {
+            "textColor": "text_Highest_Emphasis",
+            "textVariant": "header_H3_Black"
+          }
+        }
+      }
+    },
+    {
+      "card": {
+        "card": {
+          "@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.RestaurantBlTab",
+          "tabs": [
+            {
+              "id": "Order Online",
+              "title": "Order Online"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "card": {
+        "card": {
+          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+          "info": {
+            "id": "803271",
+            "name": "IGP sweets",
+            "city": "Jalandhar",
+            "slugs": {
+              "restaurant": "igp-sweets-south_jalandhar-south_jalandhar",
+              "city": "jalandhar"
+            },
+            "uniqueId": "e51e6528-4859-48c8-8fed-e84c17dc2d76",
+            "cloudinaryImageId": "e2835ca7ef7146371dc51de6698e3c87",
+            "locality": "Suman Business Park",
+            "areaName": "South_Jalandhar",
+            "costForTwo": "29900",
+            "costForTwoMessage": "₹299 for two",
+            "cuisines": ["Desserts", "Bakery"],
+            "feeDetails": {
+              "restaurantId": "803271",
+              "fees": [
+                {
+                  "name": "TYPE_DISTANCE"
+                },
+                {
+                  "name": "TYPE_TIME"
+                }
+              ],
+              "title": "Delivery Charge",
+              "amount": "0"
+            },
+            "parentId": "478272",
+            "avgRatingString": "NEW",
+            "sla": {
+              "restaurantId": "803271",
+              "deliveryTime": 29,
+              "minDeliveryTime": 25,
+              "maxDeliveryTime": 30,
+              "lastMileTravel": 2.5,
+              "serviceability": "SERVICEABLE",
+              "stressFactor": 1,
+              "rainMode": "RAIN_MODE_NONE",
+              "longDistance": "LONG_DISTANCE_NOT_LONG_DISTANCE",
+              "zoneId": 3261,
+              "slaString": "25-30 MINS",
+              "lastMileTravelString": "2.5 km",
+              "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+              "nextCloseTime": "2024-04-20 23:59:00",
+              "visibility": true,
+              "opened": true,
+              "restaurantClosedMeta": {}
+            },
+            "aggregatedDiscountInfo": {
+              "header": "10% off",
+              "shortDescriptionList": [
+                {
+                  "meta": "10% off | Use TRYNEW",
+                  "discountType": "Percentage",
+                  "operationType": "RESTAURANT"
+                },
+                {
+                  "discountType": "Percentage",
+                  "operationType": "RESTAURANT"
+                }
+              ],
+              "descriptionList": [
+                {
+                  "meta": "10% off up to ₹40 | Use code TRYNEW",
+                  "discountType": "Percentage",
+                  "operationType": "RESTAURANT"
+                },
+                {
+                  "meta": "20% off upto ₹125 | Use AMEXMATCHDAY Above ₹549",
+                  "discountType": "Percentage",
+                  "operationType": "RESTAURANT"
+                }
+              ],
+              "visible": true
+            },
+            "badges": {},
+            "slugString": "igp-sweets-south_jalandhar-south_jalandhar",
+            "isOpen": true,
+            "labels": [
+              {
+                "title": "Timings",
+                "message": "null"
+              },
+              {
+                "title": "Address",
+                "message": "Property no Kh No.3249/1295 Punjab complex 1st Floor, HDFC bank Building, bhargo camp adda Main Nakodar Road, Jalandhar - 144003"
+              },
+              {
+                "title": "Cuisines",
+                "message": "Desserts,Bakery"
+              }
+            ],
+            "aggregatedDiscountInfoV2": {
+              "header": "10% off",
+              "shortDescriptionList": [
+                {
+                  "meta": "10% off | Use TRYNEW",
+                  "discountType": "Percentage",
+                  "operationType": "RESTAURANT"
+                },
+                {
+                  "discountType": "Percentage",
+                  "operationType": "RESTAURANT"
+                }
+              ],
+              "descriptionList": [
+                {
+                  "meta": "10% off up to ₹40 | Use code TRYNEW",
+                  "discountType": "Percentage",
+                  "operationType": "RESTAURANT"
+                },
+                {
+                  "meta": "20% off upto ₹125 | Use AMEXMATCHDAY Above ₹549",
+                  "discountType": "Percentage",
+                  "operationType": "RESTAURANT"
+                }
+              ],
+              "couponDetailsCta": "View coupon details"
+            },
+            "type": "F",
+            "headerBanner": {
+              "url": "swiggy://webview?is_external=false&webview_url=https://www.swiggy.com/restaurant-info/803271"
+            },
+            "orderabilityCommunication": {
+              "title": {},
+              "subTitle": {},
+              "message": {},
+              "customIcon": {}
+            },
+            "cartOrderabilityNudgeBanner": {
+              "parameters": {},
+              "presentation": {}
+            },
+            "latLong": "31.312343,75.568603",
+            "externalRatings": {
+              "aggregatedRating": {
+                "rating": "--"
+              }
+            },
+            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+            "backgroundImageOverlayInfo": {}
+          },
+          "analytics": {}
+        }
+      }
+    },
+    {
+      "card": {
+        "card": {
+          "@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.GridWidget",
+          "layout": {
+            "rows": 1,
+            "columns": 5,
+            "horizontalScrollEnabled": true,
+            "itemSpacing": 12,
+            "lineSpacing": 10,
+            "widgetPadding": {},
+            "containerStyle": {
+              "containerPadding": {
+                "left": 10,
+                "right": 10
+              }
+            },
+            "scrollBar": {
+              "scrollThumbColor": "#E46D47",
+              "scrollTrackColor": "#e4e4e4",
+              "width": 54,
+              "height": 4,
+              "scrollStyling": {
+                "padding": {
+                  "top": 20,
+                  "bottom": 20
+                }
+              }
+            }
+          },
+          "id": "offerCollectionWidget",
+          "gridElements": {
+            "infoWithStyle": {
+              "@type": "type.googleapis.com/swiggy.presentation.food.v2.OfferInfoWithStyle",
+              "offers": [
+                {
+                  "info": {
+                    "header": "10% OFF UPTO ₹40",
+                    "offerTagColor": "#E46D47",
+                    "offerIds": ["dc7067f5-94b6-4d41-a02a-a1ed69d04209"],
+                    "expiryTime": "1970-01-01T00:00:00Z",
+                    "couponCode": "USE TRYNEW",
+                    "description": "ABOVE ₹179",
+                    "offerType": "offers",
+                    "restId": "803271",
+                    "offerLogo": "offers/generic",
+                    "descriptionTextColor": "#7302060C"
+                  },
+                  "cta": {
+                    "type": "OFFER_HALF_CARD"
+                  }
+                },
+                {
+                  "info": {
+                    "header": "20% OFF UPTO ₹125",
+                    "offerTagColor": "#E46D47",
+                    "logoBottom": "MARKETING_BANNERS/IMAGES/OFFERS/2024/4/4/a0b7cb44-dab7-4128-9fd7-7b59aab0ab6c_AMEX.png",
+                    "offerIds": ["5cf59eab-90a6-46d8-888c-7935d1766252"],
+                    "expiryTime": "1970-01-01T00:00:00Z",
+                    "couponCode": "USE AMEXMATCHDAY",
+                    "description": "ABOVE ₹549",
+                    "offerType": "offers",
+                    "restId": "803271",
+                    "offerLogo": "MARKETING_BANNERS/IMAGES/OFFERS/2024/4/4/a0b7cb44-dab7-4128-9fd7-7b59aab0ab6c_AMEX.png",
+                    "descriptionTextColor": "#7302060C"
+                  },
+                  "cta": {
+                    "type": "OFFER_HALF_CARD"
+                  }
+                },
+                {
+                  "info": {
+                    "header": "20% OFF UPTO ₹125",
+                    "offerTagColor": "#E46D47",
+                    "logoBottom": "MARKETING_BANNERS/IMAGES/OFFERS/2024/4/17/9d95c191-0ad0-4292-9935-fb8764b97062_Kotak.png",
+                    "offerIds": ["805c7f55-5dd4-4da3-b9e4-a34495912597"],
+                    "expiryTime": "1970-01-01T00:00:00Z",
+                    "couponCode": "USE KOTAK811",
+                    "description": "ABOVE ₹499",
+                    "offerType": "offers",
+                    "restId": "803271",
+                    "offerLogo": "MARKETING_BANNERS/IMAGES/OFFERS/2024/4/17/9d95c191-0ad0-4292-9935-fb8764b97062_Kotak.png",
+                    "descriptionTextColor": "#7302060C"
+                  },
+                  "cta": {
+                    "type": "OFFER_HALF_CARD"
+                  }
+                },
+                {
+                  "info": {
+                    "header": "15% OFF UPTO ₹150",
+                    "offerTagColor": "#E46D47",
+                    "logoBottom": "MARKETING_BANNERS/IMAGES/OFFERS/2024/4/4/ea942094-65ec-4248-9c59-778823fffddb_HSBC.png",
+                    "offerIds": ["600bd7ee-585a-4c79-8dd8-95c461e349b7"],
+                    "expiryTime": "1970-01-01T00:00:00Z",
+                    "couponCode": "USE HSBCFEST",
+                    "description": "ABOVE ₹499",
+                    "offerType": "offers",
+                    "restId": "803271",
+                    "offerLogo": "MARKETING_BANNERS/IMAGES/OFFERS/2024/4/4/ea942094-65ec-4248-9c59-778823fffddb_HSBC.png",
+                    "descriptionTextColor": "#7302060C"
+                  },
+                  "cta": {
+                    "type": "OFFER_HALF_CARD"
+                  }
+                },
+                {
+                  "info": {
+                    "header": "15% OFF UPTO ₹300",
+                    "offerTagColor": "#E46D47",
+                    "logoBottom": "MARKETING_BANNERS/IMAGES/OFFERS/2024/4/4/7806e2f2-5e05-49de-a59f-8b27212b816f_Citi.png",
+                    "offerIds": ["ff78f7f5-13ee-492f-8a02-e1148473d717"],
+                    "expiryTime": "1970-01-01T00:00:00Z",
+                    "couponCode": "USE CITIFOODIE",
+                    "description": "ABOVE ₹1200",
+                    "offerType": "offers",
+                    "restId": "803271",
+                    "offerLogo": "MARKETING_BANNERS/IMAGES/OFFERS/2024/4/4/7806e2f2-5e05-49de-a59f-8b27212b816f_Citi.png",
+                    "descriptionTextColor": "#7302060C"
+                  },
+                  "cta": {
+                    "type": "OFFER_HALF_CARD"
+                  }
+                }
+              ],
+              "habitMilestoneInfo": {
+                "callout": {}
+              },
+              "loyaltyDiscoverPresentationInfo": {
+                "logoCtx": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "card": {
+        "card": {
+          "@type": "type.googleapis.com/swiggy.presentation.food.v2.MenuTab",
+          "tabs": [
+            {
+              "id": "REGULAR",
+              "title": "Full Menu",
+              "selected": true,
+              "analytics": {},
+              "selectedImage": "v1594205104/fullMenuActive_qcsdzt.png",
+              "unselectedImage": "v1594205107/fullMenuInactive_fbdtp2.png"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "groupedCard": {
+        "cardGroupMap": {
+          "REGULAR": {
+            "cards": [
+              {
+                "card": {
+                  "card": {
+                    "@type": "type.googleapis.com/swiggy.presentation.food.v2.MenuVegFilterAndBadge",
+                    "badges": {},
+                    "vegOnlyDetails": {
+                      "imageId": "AutoVegOnly_qkjowj",
+                      "title": "Showing only vegetarian options.",
+                      "description": "Tap on the VEG ONLY button to turn off the setting"
+                    },
+                    "topRatedFilter": {},
+                    "kidsCategoryFilter": {
+                      "attributes": {
+                        "displayText": "Kids Favourites",
+                        "tooltip": {
+                          "enabled": true,
+                          "displayText": "Kids Favourites Filter applied. Remove this filter to see the full Menu."
+                        }
+                      }
+                    },
+                    "vegFilter": {
+                      "attributes": {
+                        "displayText": "VEG"
+                      }
+                    },
+                    "nonvegFilter": {
+                      "attributes": {
+                        "displayText": "NONVEG"
+                      }
+                    }
+                  },
+                  "relevance": {
+                    "type": "RELEVANCE_TYPE_ON_MENU_FILTER_TOGGLED",
+                    "sectionId": "MENU_FILTER_TOGGLE"
+                  }
+                }
+              },
+              {
+                "card": {
+                  "card": {
+                    "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                    "title": "Ghee Sweets",
+                    "itemCards": [
+                      {
+                        "card": {
+                          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                          "info": {
+                            "id": "137046244",
+                            "name": "Besan Burfi",
+                            "category": "Ghee Sweets",
+                            "description": "Indulge in the rich and aromatic delight of our Besan Burfi, a traditional Indian sweet made from roasted gram flour, ghee, and aromatic spices. Each bite offers a perfect balance of sweetness and nuttiness, creating a heavenly experience for your taste buds.",
+                            "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/3/26/9c25be34-1fb9-4703-93e7-c8a42562af27_17d96035-0c8d-4c67-a1c0-c6999271c443.jpg_compressed",
+                            "inStock": 1,
+                            "isVeg": 1,
+                            "variants": {},
+                            "variantsV2": {
+                              "variantGroups": [
+                                {
+                                  "groupId": "40481377",
+                                  "name": "Quantity",
+                                  "variations": [
+                                    {
+                                      "name": "200 Gm",
+                                      "price": 225,
+                                      "default": 1,
+                                      "id": "129571397",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    },
+                                    {
+                                      "name": "400 Gm",
+                                      "price": 445,
+                                      "id": "129571398",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    },
+                                    {
+                                      "name": "800 Gm",
+                                      "price": 895,
+                                      "id": "129571399",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    }
+                                  ]
+                                }
+                              ],
+                              "pricingModels": [
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "40481377",
+                                      "variationId": "129571397"
+                                    }
+                                  ],
+                                  "price": 22500
+                                },
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "40481377",
+                                      "variationId": "129571398"
+                                    }
+                                  ],
+                                  "price": 44500
+                                },
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "40481377",
+                                      "variationId": "129571399"
+                                    }
+                                  ],
+                                  "price": 89500
+                                }
+                              ]
+                            },
+                            "itemAttribute": {
+                              "vegClassifier": "VEG"
+                            },
+                            "defaultPrice": 22500,
+                            "ribbon": {},
+                            "type": "ITEM",
+                            "itemBadge": {},
+                            "badgesV2": {},
+                            "ratings": {
+                              "aggregatedRating": {}
+                            }
+                          },
+                          "analytics": {},
+                          "hideRestaurantDetails": true
+                        }
+                      },
+                      {
+                        "card": {
+                          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                          "info": {
+                            "id": "131688619",
+                            "name": "Dhoda Burfi",
+                            "category": "Ghee Sweets",
+                            "description": "Enjoy Our Delectable Dhoda With Your Loved Ones. With A Dense, Fudgy Texture And A Rich Caramel Flavor, It Combines Besan (Gram Flour), Ghee, Khoya, And Sugar. A Perfect For Every Festival Or Midnight Cravings.",
+                            "imageId": "babdbe36961314079db2ce1f44a0e9d6",
+                            "inStock": 1,
+                            "isVeg": 1,
+                            "variants": {},
+                            "variantsV2": {
+                              "variantGroups": [
+                                {
+                                  "groupId": "36278394",
+                                  "name": "Quantity",
+                                  "variations": [
+                                    {
+                                      "name": "200 Gm",
+                                      "price": 245,
+                                      "default": 1,
+                                      "id": "112735793",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    },
+                                    {
+                                      "name": "400 Gm",
+                                      "price": 485,
+                                      "id": "112735794",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    },
+                                    {
+                                      "name": "800 Gm",
+                                      "price": 975,
+                                      "id": "112735795",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    }
+                                  ]
+                                }
+                              ],
+                              "pricingModels": [
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "36278394",
+                                      "variationId": "112735793"
+                                    }
+                                  ],
+                                  "price": 24500
+                                },
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "36278394",
+                                      "variationId": "112735794"
+                                    }
+                                  ],
+                                  "price": 48500
+                                },
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "36278394",
+                                      "variationId": "112735795"
+                                    }
+                                  ],
+                                  "price": 97500
+                                }
+                              ]
+                            },
+                            "itemAttribute": {
+                              "vegClassifier": "VEG"
+                            },
+                            "defaultPrice": 24500,
+                            "ribbon": {},
+                            "type": "ITEM",
+                            "itemBadge": {},
+                            "badgesV2": {},
+                            "ratings": {
+                              "aggregatedRating": {}
+                            }
+                          },
+                          "analytics": {},
+                          "hideRestaurantDetails": true
+                        }
+                      },
+                      {
+                        "card": {
+                          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                          "info": {
+                            "id": "131688608",
+                            "name": "Besan Ladoo",
+                            "category": "Ghee Sweets",
+                            "description": "An Absolute Delight To Your Taste Buds, This 200 Gms Box Of Desi Ghee Besan Laddoo Will Take You To A Trip Down The Memory Lane Reminding You Of The Besan Laddoo Mother Made. The Rich Flavour Of Ghee Combined With Besan And The Sweetness Of Sugar Melt-In Your Mouth And Keep You Coming Back For More.",
+                            "imageId": "04156110b47790d6271a2f239a321cbf",
+                            "inStock": 1,
+                            "isVeg": 1,
+                            "variants": {},
+                            "variantsV2": {
+                              "variantGroups": [
+                                {
+                                  "groupId": "36278391",
+                                  "name": "Quantity",
+                                  "variations": [
+                                    {
+                                      "name": "200 Gm",
+                                      "price": 225,
+                                      "default": 1,
+                                      "id": "112735784",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    },
+                                    {
+                                      "name": "400 Gm",
+                                      "price": 445,
+                                      "id": "112735785",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    },
+                                    {
+                                      "name": "800 Gm",
+                                      "price": 895,
+                                      "id": "112735788",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    }
+                                  ]
+                                }
+                              ],
+                              "pricingModels": [
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "36278391",
+                                      "variationId": "112735784"
+                                    }
+                                  ],
+                                  "price": 22500
+                                },
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "36278391",
+                                      "variationId": "112735785"
+                                    }
+                                  ],
+                                  "price": 44500
+                                },
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "36278391",
+                                      "variationId": "112735788"
+                                    }
+                                  ],
+                                  "price": 89500
+                                }
+                              ]
+                            },
+                            "itemAttribute": {
+                              "vegClassifier": "VEG"
+                            },
+                            "defaultPrice": 22500,
+                            "ribbon": {},
+                            "type": "ITEM",
+                            "itemBadge": {},
+                            "badgesV2": {},
+                            "ratings": {
+                              "aggregatedRating": {}
+                            }
+                          },
+                          "analytics": {},
+                          "hideRestaurantDetails": true
+                        }
+                      },
+                      {
+                        "card": {
+                          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                          "info": {
+                            "id": "131688630",
+                            "name": "Motichoor Laddoo",
+                            "category": "Ghee Sweets",
+                            "description": "A Beloved Indian Sweet Featuring Tiny, Golden-Hued Gram Flour Pearls Fried To Perfection And Delicately Crafted Into Round, Bite-Sized Laddoos. Sweetened With Sugar Syrup, These Laddoos Boast A Melt-In-The-Mouth Texture With A Delightful Blend Of Cardamom And Saffron Flavors. A Festive Favorite, Perfect For Celebrating Joyous Occasions.",
+                            "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/3/8/6c38a1dd-e887-4b31-843c-cace13d23087_df17c5f4-ba21-42e8-9957-99bb9ee3f498_compressed",
+                            "inStock": 1,
+                            "isVeg": 1,
+                            "variants": {},
+                            "variantsV2": {
+                              "variantGroups": [
+                                {
+                                  "groupId": "36278402",
+                                  "name": "Quantity",
+                                  "variations": [
+                                    {
+                                      "name": "200 Gm",
+                                      "price": 185,
+                                      "default": 1,
+                                      "id": "112735816",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    },
+                                    {
+                                      "name": "400 Gm",
+                                      "price": 365,
+                                      "id": "112735817",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    },
+                                    {
+                                      "name": "800 Gm",
+                                      "price": 735,
+                                      "id": "112735818",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    }
+                                  ]
+                                }
+                              ],
+                              "pricingModels": [
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "36278402",
+                                      "variationId": "112735816"
+                                    }
+                                  ],
+                                  "price": 18500
+                                },
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "36278402",
+                                      "variationId": "112735817"
+                                    }
+                                  ],
+                                  "price": 36500
+                                },
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "36278402",
+                                      "variationId": "112735818"
+                                    }
+                                  ],
+                                  "price": 73500
+                                }
+                              ]
+                            },
+                            "itemAttribute": {
+                              "vegClassifier": "VEG"
+                            },
+                            "defaultPrice": 18500,
+                            "ribbon": {},
+                            "type": "ITEM",
+                            "itemBadge": {},
+                            "badgesV2": {},
+                            "ratings": {
+                              "aggregatedRating": {}
+                            }
+                          },
+                          "analytics": {},
+                          "hideRestaurantDetails": true
+                        }
+                      },
+                      {
+                        "card": {
+                          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                          "info": {
+                            "id": "131688624",
+                            "name": "Jodhpuri Ladoo",
+                            "category": "Ghee Sweets",
+                            "description": "A Royal Indulgence, Hailing From The City Of Jodhpur In India. These Exquisite Laddoos Are A Harmonious Blend Of Besan (Gram Flour), Ghee, And Sugar, Intricately Crafted Into Round, Golden Spheres. Enhanced With The Aromatic Essence Of Cardamom, These Laddoos Offer A Regal Taste, Making Them A Perfect Choice For Adding A Touch Of Grandeur To Your Sweet Celebrations.",
+                            "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/3/8/eb317fc3-670a-447f-9793-7520d72545e4_9b85061e-a7d8-40b1-9014-bc5834a3e3b1_compressed",
+                            "inStock": 1,
+                            "isVeg": 1,
+                            "variants": {},
+                            "variantsV2": {
+                              "variantGroups": [
+                                {
+                                  "groupId": "36278396",
+                                  "name": "Quantity",
+                                  "variations": [
+                                    {
+                                      "name": "200 Gm",
+                                      "price": 185,
+                                      "default": 1,
+                                      "id": "112735798",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    },
+                                    {
+                                      "name": "400 Gm",
+                                      "price": 365,
+                                      "id": "112735799",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    },
+                                    {
+                                      "name": "800 Gm",
+                                      "price": 735,
+                                      "id": "112735800",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    }
+                                  ]
+                                }
+                              ],
+                              "pricingModels": [
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "36278396",
+                                      "variationId": "112735798"
+                                    }
+                                  ],
+                                  "price": 18500
+                                },
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "36278396",
+                                      "variationId": "112735799"
+                                    }
+                                  ],
+                                  "price": 36500
+                                },
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "36278396",
+                                      "variationId": "112735800"
+                                    }
+                                  ],
+                                  "price": 73500
+                                }
+                              ]
+                            },
+                            "itemAttribute": {
+                              "vegClassifier": "VEG"
+                            },
+                            "defaultPrice": 18500,
+                            "ribbon": {},
+                            "type": "ITEM",
+                            "itemBadge": {},
+                            "badgesV2": {},
+                            "ratings": {
+                              "aggregatedRating": {}
+                            }
+                          },
+                          "analytics": {},
+                          "hideRestaurantDetails": true
+                        }
+                      },
+                      {
+                        "card": {
+                          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                          "info": {
+                            "id": "131688622",
+                            "name": "Gulab Jamun (6Pcs)",
+                            "category": "Ghee Sweets",
+                            "description": "A Cherished Indian Dessert, Presents Deep-Fried Dumplings Made From Milk Solids, Soaked In A Fragrant Sugar Syrup. These Golden Orbs Boast A Irresistibly Soft And Spongy Texture, Delivering A Delightful Burst Of Sweetness With Every Bite. A Timeless Treat, Perfect For Indulging In The Rich And Decadent Flavors Of Indian Cuisine.",
+                            "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/3/8/0c22b1c9-cff7-482e-b604-e2b8e2e16e7e_48783523-985b-49b4-b88e-1494e16f5dc1_compressed",
+                            "inStock": 1,
+                            "isVeg": 1,
+                            "price": 24500,
+                            "variants": {},
+                            "variantsV2": {},
+                            "itemAttribute": {
+                              "vegClassifier": "VEG"
+                            },
+                            "ribbon": {},
+                            "type": "ITEM",
+                            "itemBadge": {},
+                            "badgesV2": {},
+                            "ratings": {
+                              "aggregatedRating": {}
+                            }
+                          },
+                          "analytics": {},
+                          "hideRestaurantDetails": true
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "card": {
+                  "card": {
+                    "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                    "title": "Kaju Sweets",
+                    "itemCards": [
+                      {
+                        "card": {
+                          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                          "info": {
+                            "id": "131688625",
+                            "name": "Kaju Burfi",
+                            "category": "Kaju Sweets",
+                            "description": "Make Any Celebration Special With A Box Of Kaju Katli Barfi With Silver Coating. The Barfis Are Made In Pure Kaju For A Delicious Taste And Can Be Combined With Any Other Product To Make A Combo Hamper.",
+                            "imageId": "05b3f3c956b073058f50964180f91ccc",
+                            "inStock": 1,
+                            "isVeg": 1,
+                            "variants": {},
+                            "variantsV2": {
+                              "variantGroups": [
+                                {
+                                  "groupId": "36278397",
+                                  "name": "Quantity",
+                                  "variations": [
+                                    {
+                                      "name": "200 Gm",
+                                      "price": 345,
+                                      "default": 1,
+                                      "id": "112735801",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    },
+                                    {
+                                      "name": "400 Gm",
+                                      "price": 685,
+                                      "id": "112735802",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    },
+                                    {
+                                      "name": "800 Gm",
+                                      "price": 1375,
+                                      "id": "112735803",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    }
+                                  ]
+                                }
+                              ],
+                              "pricingModels": [
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "36278397",
+                                      "variationId": "112735801"
+                                    }
+                                  ],
+                                  "price": 34500
+                                },
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "36278397",
+                                      "variationId": "112735802"
+                                    }
+                                  ],
+                                  "price": 68500
+                                },
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "36278397",
+                                      "variationId": "112735803"
+                                    }
+                                  ],
+                                  "price": 137500
+                                }
+                              ]
+                            },
+                            "itemAttribute": {
+                              "vegClassifier": "VEG"
+                            },
+                            "defaultPrice": 34500,
+                            "ribbon": {},
+                            "type": "ITEM",
+                            "itemBadge": {},
+                            "badgesV2": {},
+                            "ratings": {
+                              "aggregatedRating": {}
+                            }
+                          },
+                          "analytics": {},
+                          "hideRestaurantDetails": true
+                        }
+                      },
+                      {
+                        "card": {
+                          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                          "info": {
+                            "id": "131688626",
+                            "name": "Kaju Roll",
+                            "category": "Kaju Sweets",
+                            "description": "A Luxurious Indian Sweet That Exudes Elegance And Richness. This Delectable Treat Features A Thin Layer Of Cashew (Kaju) Paste Rolled Around A Sweet Filling, Often Made With A Blend Of Cashews And Sugar. The Result Is A Smooth, Velvety Roll With A Perfect Balance Of Nuttiness And Sweetness.",
+                            "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/3/8/cd678633-cb7b-4e34-905f-0d08745133c6_daa31ce7-755a-44fc-8bf4-4a08b0884b27_compressed",
+                            "inStock": 1,
+                            "isVeg": 1,
+                            "variants": {},
+                            "variantsV2": {
+                              "variantGroups": [
+                                {
+                                  "groupId": "36278398",
+                                  "name": "Quantity",
+                                  "variations": [
+                                    {
+                                      "name": "200 Gm",
+                                      "price": 225,
+                                      "default": 1,
+                                      "id": "112735804",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    },
+                                    {
+                                      "name": "400 Gm",
+                                      "price": 445,
+                                      "id": "112735805",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    },
+                                    {
+                                      "name": "800 Gm",
+                                      "price": 895,
+                                      "id": "112735806",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    }
+                                  ]
+                                }
+                              ],
+                              "pricingModels": [
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "36278398",
+                                      "variationId": "112735804"
+                                    }
+                                  ],
+                                  "price": 22500
+                                },
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "36278398",
+                                      "variationId": "112735805"
+                                    }
+                                  ],
+                                  "price": 44500
+                                },
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "36278398",
+                                      "variationId": "112735806"
+                                    }
+                                  ],
+                                  "price": 89500
+                                }
+                              ]
+                            },
+                            "itemAttribute": {
+                              "vegClassifier": "VEG"
+                            },
+                            "defaultPrice": 22500,
+                            "ribbon": {},
+                            "type": "ITEM",
+                            "itemBadge": {},
+                            "badgesV2": {},
+                            "ratings": {
+                              "aggregatedRating": {}
+                            }
+                          },
+                          "analytics": {},
+                          "hideRestaurantDetails": true
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "card": {
+                  "card": {
+                    "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                    "title": "Khoya Sweets",
+                    "itemCards": [
+                      {
+                        "card": {
+                          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                          "info": {
+                            "id": "131688627",
+                            "name": "Khoya Pista Burfi",
+                            "category": "Khoya Sweets",
+                            "description": "A Delectable Indian Sweet That Marries The Rich Creaminess Of Khoya With The Nutty Crunch Of Pistachios. This Square Or Diamond-Shaped Burfi Boasts A Melt-In-The-Mouth Texture, Creating A Perfect Harmony Of Flavors. The Vibrant Green Pistachios Add A Delightful Visual Appeal While Enhancing The Overall Taste. A Must-Try For Those Who Appreciate The Fusion Of Creamy Sweetness And The Earthy Goodness Of Pistachios.",
+                            "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/3/8/6402341f-71ee-4e37-8f70-a172b1a022aa_4c20c405-fa18-4b0f-9be1-b498ee183582_compressed",
+                            "inStock": 1,
+                            "isVeg": 1,
+                            "variants": {},
+                            "variantsV2": {
+                              "variantGroups": [
+                                {
+                                  "groupId": "36278399",
+                                  "name": "Quantity",
+                                  "variations": [
+                                    {
+                                      "name": "200 Gm",
+                                      "price": 215,
+                                      "default": 1,
+                                      "id": "112735807",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    },
+                                    {
+                                      "name": "400 Gm",
+                                      "price": 425,
+                                      "id": "112735808",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    },
+                                    {
+                                      "name": "800 Gm",
+                                      "price": 855,
+                                      "id": "112735809",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    }
+                                  ]
+                                }
+                              ],
+                              "pricingModels": [
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "36278399",
+                                      "variationId": "112735807"
+                                    }
+                                  ],
+                                  "price": 21500
+                                },
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "36278399",
+                                      "variationId": "112735808"
+                                    }
+                                  ],
+                                  "price": 42500
+                                },
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "36278399",
+                                      "variationId": "112735809"
+                                    }
+                                  ],
+                                  "price": 85500
+                                }
+                              ]
+                            },
+                            "itemAttribute": {
+                              "vegClassifier": "VEG"
+                            },
+                            "defaultPrice": 21500,
+                            "ribbon": {},
+                            "type": "ITEM",
+                            "itemBadge": {},
+                            "badgesV2": {},
+                            "ratings": {
+                              "aggregatedRating": {}
+                            }
+                          },
+                          "analytics": {},
+                          "hideRestaurantDetails": true
+                        }
+                      },
+                      {
+                        "card": {
+                          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                          "info": {
+                            "id": "131688629",
+                            "name": "Milk Cake",
+                            "category": "Khoya Sweets",
+                            "description": "The Milk Cake Is A Deceptive Sweet. It Looks Relatively Simple But It Takes Utmost Skill And Patience To Make This Melt-In-The-Mouth Sweet. The Crumbly Temptation Is Made Of Curdled Milk And Saffron, Reduced And Caramelized Over A Low Flame With Constant Observation To Ensure Perfection.",
+                            "imageId": "b2b069fb60f52e3b7a75d6d0a97926e1",
+                            "inStock": 1,
+                            "isVeg": 1,
+                            "variants": {},
+                            "variantsV2": {
+                              "variantGroups": [
+                                {
+                                  "groupId": "36278401",
+                                  "name": "Quantity",
+                                  "variations": [
+                                    {
+                                      "name": "200 Gm",
+                                      "price": 245,
+                                      "default": 1,
+                                      "id": "112735813",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    },
+                                    {
+                                      "name": "400 Gm",
+                                      "price": 485,
+                                      "id": "112735814",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    },
+                                    {
+                                      "name": "800 Gm",
+                                      "price": 975,
+                                      "id": "112735815",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    }
+                                  ]
+                                }
+                              ],
+                              "pricingModels": [
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "36278401",
+                                      "variationId": "112735813"
+                                    }
+                                  ],
+                                  "price": 24500
+                                },
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "36278401",
+                                      "variationId": "112735814"
+                                    }
+                                  ],
+                                  "price": 48500
+                                },
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "36278401",
+                                      "variationId": "112735815"
+                                    }
+                                  ],
+                                  "price": 97500
+                                }
+                              ]
+                            },
+                            "itemAttribute": {
+                              "vegClassifier": "VEG"
+                            },
+                            "defaultPrice": 24500,
+                            "ribbon": {},
+                            "type": "ITEM",
+                            "itemBadge": {},
+                            "badgesV2": {},
+                            "ratings": {
+                              "aggregatedRating": {}
+                            }
+                          },
+                          "analytics": {},
+                          "hideRestaurantDetails": true
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "card": {
+                  "card": {
+                    "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                    "title": "Petha Sweets",
+                    "itemCards": [
+                      {
+                        "card": {
+                          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                          "info": {
+                            "id": "131688635",
+                            "name": "Coconut Barfi",
+                            "category": "Petha Sweets",
+                            "description": "A Guilt-Free Indulgence For Those With A Sweet Tooth. Crafted From Premium Cashews And Sweetened With Sugar Substitutes, These Delectable Bites Provide A Delightful Nutty Flavor Without Compromising On Sweetness. Perfect For Those Seeking A Low-Sugar Or Diabetic-Friendly Treat, These Kaju Bites Are A Healthier Alternative Without Sacrificing Taste.",
+                            "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/3/8/74b28aff-531b-4291-8efb-36743e17b73d_87062bf5-e4bd-4bc0-892a-f80e15c11453_compressed",
+                            "inStock": 1,
+                            "isVeg": 1,
+                            "variants": {},
+                            "variantsV2": {
+                              "variantGroups": [
+                                {
+                                  "groupId": "36278404",
+                                  "name": "Quantity",
+                                  "variations": [
+                                    {
+                                      "name": "200 Gm",
+                                      "price": 225,
+                                      "default": 1,
+                                      "id": "112735822",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    },
+                                    {
+                                      "name": "400 Gm",
+                                      "price": 445,
+                                      "id": "112735823",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    },
+                                    {
+                                      "name": "800 Gm",
+                                      "price": 885,
+                                      "id": "112735824",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    }
+                                  ]
+                                }
+                              ],
+                              "pricingModels": [
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "36278404",
+                                      "variationId": "112735822"
+                                    }
+                                  ],
+                                  "price": 22500
+                                },
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "36278404",
+                                      "variationId": "112735823"
+                                    }
+                                  ],
+                                  "price": 44500
+                                },
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "36278404",
+                                      "variationId": "112735824"
+                                    }
+                                  ],
+                                  "price": 88500
+                                }
+                              ]
+                            },
+                            "itemAttribute": {
+                              "vegClassifier": "VEG"
+                            },
+                            "defaultPrice": 22500,
+                            "ribbon": {},
+                            "type": "ITEM",
+                            "itemBadge": {},
+                            "badgesV2": {},
+                            "ratings": {
+                              "aggregatedRating": {}
+                            }
+                          },
+                          "analytics": {},
+                          "hideRestaurantDetails": true
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "card": {
+                  "card": {
+                    "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                    "title": "Dry Fruit Sweets",
+                    "itemCards": [
+                      {
+                        "card": {
+                          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                          "info": {
+                            "id": "131688615",
+                            "name": "Channa Badam Burfi",
+                            "category": "Dry Fruit Sweets",
+                            "description": "A Delectable Indian Sweet That Combines The Wholesome Goodness Of Chickpea Flour With An Assortment Of Finely Chopped Dry Fruits. This Square Or Rectangular Burfi Boasts A Rich, Nutty Flavor And A Dense, Fudgy Texture. Indulge In The Delightful Fusion Of Traditional And Nutty Flavors With Every Bite Of Channa Dry Fruit Burfi.",
+                            "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/3/8/c63e5977-0655-4250-b384-49bde5ce5bd0_8c5c9f3b-f94e-459f-bfd0-dd3257bb01a2_compressed",
+                            "inStock": 1,
+                            "isVeg": 1,
+                            "variants": {},
+                            "variantsV2": {
+                              "variantGroups": [
+                                {
+                                  "groupId": "36278393",
+                                  "name": "Quantity",
+                                  "variations": [
+                                    {
+                                      "name": "200 Gm",
+                                      "price": 245,
+                                      "default": 1,
+                                      "id": "112735790",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    },
+                                    {
+                                      "name": "400 Gm",
+                                      "price": 485,
+                                      "id": "112735791",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    },
+                                    {
+                                      "name": "800 Gm",
+                                      "price": 975,
+                                      "id": "112735792",
+                                      "inStock": 1,
+                                      "isVeg": 1,
+                                      "isEnabled": 1
+                                    }
+                                  ]
+                                }
+                              ],
+                              "pricingModels": [
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "36278393",
+                                      "variationId": "112735790"
+                                    }
+                                  ],
+                                  "price": 24500
+                                },
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "36278393",
+                                      "variationId": "112735791"
+                                    }
+                                  ],
+                                  "price": 48500
+                                },
+                                {
+                                  "variations": [
+                                    {
+                                      "groupId": "36278393",
+                                      "variationId": "112735792"
+                                    }
+                                  ],
+                                  "price": 97500
+                                }
+                              ]
+                            },
+                            "itemAttribute": {
+                              "vegClassifier": "VEG"
+                            },
+                            "defaultPrice": 24500,
+                            "ribbon": {},
+                            "type": "ITEM",
+                            "itemBadge": {},
+                            "badgesV2": {},
+                            "ratings": {
+                              "aggregatedRating": {}
+                            }
+                          },
+                          "analytics": {},
+                          "hideRestaurantDetails": true
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "card": {
+                  "card": {
+                    "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                    "title": "International Sweets",
+                    "itemCards": [
+                      {
+                        "card": {
+                          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                          "info": {
+                            "id": "131688603",
+                            "name": "Baklava (9 Pcs)",
+                            "category": "International Sweets",
+                            "description": "Orginated From The Middle East, It'S Love At First Bite & Without A Doubt Loved By All! Serving - (Baklawa Sweet - 475.78, Tart - 393.61, Kanafeh - 324) Kcal / 100G. Allergen: Contains Wheat Gluten, Dairy. May Contain Nuts. (Packaged In A Facility That Handle Other Nuts). (225 Gm)",
+                            "imageId": "7b9f48a138b880dfa9be3d6f26532cd9",
+                            "inStock": 1,
+                            "isVeg": 1,
+                            "price": 79500,
+                            "variants": {},
+                            "variantsV2": {},
+                            "itemAttribute": {
+                              "vegClassifier": "VEG"
+                            },
+                            "ribbon": {},
+                            "type": "ITEM",
+                            "itemBadge": {},
+                            "badgesV2": {},
+                            "ratings": {
+                              "aggregatedRating": {}
+                            }
+                          },
+                          "analytics": {},
+                          "hideRestaurantDetails": true
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "card": {
+                  "card": {
+                    "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                    "title": "Chocolate & Cookies",
+                    "itemCards": [
+                      {
+                        "card": {
+                          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                          "info": {
+                            "id": "131688598",
+                            "name": "Assorted Cookies (100 gm)",
+                            "category": "Chocolate & Cookies",
+                            "description": "Our Assorted Cookies Are A Delectable Assortment Of Handcrafted, Premium-Quality Treats That Cater To A Wide Range Of Taste Preferences. Each Bite Is A Journey Through A World Of Flavors And Textures, Promising To Satisfy Your Sweet Cravings In The Most Delightful Way. Serving - 557 Kcal / 100G. Allergen: Contains Wheat, Milk And Soy.",
+                            "imageId": "ffe45f789e1f04ff803214f9e92caf51",
+                            "inStock": 1,
+                            "isVeg": 1,
+                            "price": 18500,
+                            "variants": {},
+                            "variantsV2": {},
+                            "itemAttribute": {
+                              "vegClassifier": "VEG"
+                            },
+                            "ribbon": {},
+                            "type": "ITEM",
+                            "itemBadge": {},
+                            "badgesV2": {},
+                            "ratings": {
+                              "aggregatedRating": {}
+                            }
+                          },
+                          "analytics": {},
+                          "hideRestaurantDetails": true
+                        }
+                      },
+                      {
+                        "card": {
+                          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                          "info": {
+                            "id": "131688637",
+                            "name": "Velvety Bar Chocolate (40 Gm)",
+                            "category": "Chocolate & Cookies",
+                            "description": "Velvety Milk Chocolate. \nServing - 656.4 Kcal / 100G. Allergen: Contains Soy, May Contain Milk And Nut.",
+                            "imageId": "d8e07269e6427b407bc57b262570e7f4",
+                            "inStock": 1,
+                            "isVeg": 1,
+                            "price": 10500,
+                            "variants": {},
+                            "variantsV2": {},
+                            "itemAttribute": {
+                              "vegClassifier": "VEG"
+                            },
+                            "ribbon": {},
+                            "type": "ITEM",
+                            "itemBadge": {},
+                            "badgesV2": {},
+                            "ratings": {
+                              "aggregatedRating": {}
+                            }
+                          },
+                          "analytics": {},
+                          "hideRestaurantDetails": true
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "card": {
+                  "card": {
+                    "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+                    "title": "Dry Fruits",
+                    "itemCards": [
+                      {
+                        "card": {
+                          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                          "info": {
+                            "id": "131688636",
+                            "name": "Thai Chilli Cashew (100 Gm)",
+                            "category": "Dry Fruits",
+                            "description": "Experience The Perfect Blend Of Heat And Crunch With Our Thai Chilli Cashews (50G). These Premium Cashews Are Generously Coated In A Zesty Thai Chilli Seasoning, Creating A Tantalizing Harmony Of Spicy And Savory Flavors. Ideal For Those Who Crave A Spicy Kick In Their Snack, These Cashews Are A Portable Delight For On-The-Go Indulgence. Satisfy Your Taste Buds With This Bold And Flavorful Thai-Inspired Treat.",
+                            "imageId": "9448a407809409559de815e8516996c8",
+                            "inStock": 1,
+                            "isVeg": 1,
+                            "price": 32500,
+                            "variants": {},
+                            "variantsV2": {},
+                            "itemAttribute": {
+                              "vegClassifier": "VEG"
+                            },
+                            "ribbon": {},
+                            "type": "ITEM",
+                            "itemBadge": {},
+                            "badgesV2": {},
+                            "ratings": {
+                              "aggregatedRating": {}
+                            }
+                          },
+                          "analytics": {},
+                          "hideRestaurantDetails": true
+                        }
+                      },
+                      {
+                        "card": {
+                          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                          "info": {
+                            "id": "131688632",
+                            "name": "Rosted Salted Cashew (50 Gm)",
+                            "category": "Dry Fruits",
+                            "description": "Indulge In The Savory Goodness Of Our Roasted Salted Cashews (50G). These Premium Cashews Are Expertly Roasted To Perfection, Enhancing Their Natural Buttery Flavor. Lightly Seasoned With High-Quality Salt, Each Bite Delivers A Satisfying Crunch And A Perfect Balance Of Nuttiness And Saltiness.",
+                            "inStock": 1,
+                            "isVeg": 1,
+                            "price": 15500,
+                            "variants": {},
+                            "variantsV2": {},
+                            "itemAttribute": {
+                              "vegClassifier": "VEG"
+                            },
+                            "ribbon": {},
+                            "type": "ITEM",
+                            "itemBadge": {},
+                            "badgesV2": {},
+                            "ratings": {
+                              "aggregatedRating": {}
+                            }
+                          },
+                          "analytics": {},
+                          "hideRestaurantDetails": true
+                        }
+                      },
+                      {
+                        "card": {
+                          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                          "info": {
+                            "id": "131688631",
+                            "name": "Peri-Peri Almond (100 Gm)",
+                            "category": "Dry Fruits",
+                            "description": "Spice Up Your Snacking Experience With Our Peri-Peri Almonds (50G - Pack of 2). These Premium Almonds Are Coated In A Bold And Flavorful Peri-Peri Seasoning, Creating A Perfect Fusion Of Heat And Crunch. Packed With Zesty And Spicy Notes, These Almonds Offer A Delightful Twist To Traditional Snacking.",
+                            "imageId": "b3452501ecaecc893871f720ca9b0e78",
+                            "inStock": 1,
+                            "isVeg": 1,
+                            "price": 32500,
+                            "variants": {},
+                            "variantsV2": {},
+                            "itemAttribute": {
+                              "vegClassifier": "VEG"
+                            },
+                            "ribbon": {},
+                            "type": "ITEM",
+                            "itemBadge": {},
+                            "badgesV2": {},
+                            "ratings": {
+                              "aggregatedRating": {}
+                            }
+                          },
+                          "analytics": {},
+                          "hideRestaurantDetails": true
+                        }
+                      },
+                      {
+                        "card": {
+                          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                          "info": {
+                            "id": "131688633",
+                            "name": "Salted Almond (50 Gm)",
+                            "category": "Dry Fruits",
+                            "description": "Enjoy The Simple And Wholesome Goodness Of Our Salted Almonds (50G). These Premium Almonds Are Lightly Roasted To Perfection, Highlighting Their Natural Nutty Richness. Lightly Seasoned With High-Quality Salt, These Almonds Offer A Classic And Satisfying Crunch With Just The Right Amount Of Saltiness. Perfect For A Quick And Nutritious Snack, Our Salted Almonds (50G) Are Conveniently Packaged For On-The-Go Indulgence.",
+                            "imageId": "771e0802005800f79873c2eb61adf938",
+                            "inStock": 1,
+                            "isVeg": 1,
+                            "price": 15500,
+                            "variants": {},
+                            "variantsV2": {},
+                            "itemAttribute": {
+                              "vegClassifier": "VEG"
+                            },
+                            "ribbon": {},
+                            "type": "ITEM",
+                            "itemBadge": {},
+                            "badgesV2": {},
+                            "ratings": {
+                              "aggregatedRating": {}
+                            }
+                          },
+                          "analytics": {},
+                          "hideRestaurantDetails": true
+                        }
+                      },
+                      {
+                        "card": {
+                          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                          "info": {
+                            "id": "131688616",
+                            "name": "Classic Almond (100 Gm)",
+                            "category": "Dry Fruits",
+                            "description": "Savor The Timeless Appeal Of Our Classic Almonds (100G). These Premium Almonds Are Carefully Selected And Lightly Roasted To Perfection, Highlighting Their Natural Nutty Flavor.",
+                            "imageId": "360d19ae8813be60ec1c2bc964492f18",
+                            "inStock": 1,
+                            "isVeg": 1,
+                            "price": 21500,
+                            "variants": {},
+                            "variantsV2": {},
+                            "itemAttribute": {
+                              "vegClassifier": "VEG"
+                            },
+                            "ribbon": {},
+                            "type": "ITEM",
+                            "itemBadge": {},
+                            "badgesV2": {},
+                            "ratings": {
+                              "aggregatedRating": {}
+                            }
+                          },
+                          "analytics": {},
+                          "hideRestaurantDetails": true
+                        }
+                      },
+                      {
+                        "card": {
+                          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                          "info": {
+                            "id": "131688617",
+                            "name": "Classic Cheshew (100 Gm)",
+                            "category": "Dry Fruits",
+                            "description": "Experience The Pure Delight Of Our Classic Cashews (100G). These Premium Cashews Are Expertly Roasted To Perfection, Showcasing Their Natural Buttery Richness. With No Additional Seasonings, These Cashews Offer A Classic And Indulgent Crunch. Conveniently Sized At 100G, They Are Perfect For Snacking At Home, In The Office, Or On The Go.",
+                            "imageId": "4c8af38e76e0e6e743e4a835e8cd440b",
+                            "inStock": 1,
+                            "isVeg": 1,
+                            "price": 21500,
+                            "variants": {},
+                            "variantsV2": {},
+                            "itemAttribute": {
+                              "vegClassifier": "VEG"
+                            },
+                            "ribbon": {},
+                            "type": "ITEM",
+                            "itemBadge": {},
+                            "badgesV2": {},
+                            "ratings": {
+                              "aggregatedRating": {}
+                            }
+                          },
+                          "analytics": {},
+                          "hideRestaurantDetails": true
+                        }
+                      },
+                      {
+                        "card": {
+                          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                          "info": {
+                            "id": "131688618",
+                            "name": "Classic Pista (100 Gm)",
+                            "category": "Dry Fruits",
+                            "description": "Indulge In The Natural Goodness Of Our Classic Pistachios (100G). These Premium Pistachios Are Carefully Selected For Their Vibrant Green Color And Rich, Nutty Flavor. Lightly Salted To Enhance Their Taste, These Pistachios Offer A Classic And Satisfying Crunch.",
+                            "inStock": 1,
+                            "isVeg": 1,
+                            "price": 24500,
+                            "variants": {},
+                            "variantsV2": {},
+                            "itemAttribute": {
+                              "vegClassifier": "VEG"
+                            },
+                            "ribbon": {},
+                            "type": "ITEM",
+                            "itemBadge": {},
+                            "badgesV2": {},
+                            "ratings": {
+                              "aggregatedRating": {}
+                            }
+                          },
+                          "analytics": {},
+                          "hideRestaurantDetails": true
+                        }
+                      },
+                      {
+                        "card": {
+                          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                          "info": {
+                            "id": "131688623",
+                            "name": "Healthy Mix (100 Gm)",
+                            "category": "Dry Fruits",
+                            "description": "Discover The Perfect Blend Of Nutrition And Flavor With Our Healthy Mix (100G). This Thoughtfully Curated Mix Combines Premium Almonds, Cashews, And Pistachios For A Wholesome Snacking Experience.",
+                            "inStock": 1,
+                            "isVeg": 1,
+                            "price": 17500,
+                            "variants": {},
+                            "variantsV2": {},
+                            "itemAttribute": {
+                              "vegClassifier": "VEG"
+                            },
+                            "ribbon": {},
+                            "type": "ITEM",
+                            "itemBadge": {},
+                            "badgesV2": {},
+                            "ratings": {
+                              "aggregatedRating": {}
+                            }
+                          },
+                          "analytics": {},
+                          "hideRestaurantDetails": true
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "card": {
+                  "card": {
+                    "@type": "type.googleapis.com/swiggy.presentation.food.v2.RestaurantLicenseInfo",
+                    "type": "FSSAI",
+                    "imageId": "fssai_final_edss9i",
+                    "text": ["License No. 22122020000585"]
+                  }
+                }
+              },
+              {
+                "card": {
+                  "card": {
+                    "@type": "type.googleapis.com/swiggy.presentation.food.v2.RestaurantAddress",
+                    "name": "IGP sweets",
+                    "area": "South_Jalandhar",
+                    "completeAddress": "Property no Kh No.3249/1295 Punjab complex 1st Floor, HDFC bank Building, bhargo camp adda Main Nakodar Road, Jalandhar - 144003"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "firstOffsetRequest": true,
+  "isQCLink": false
+}
