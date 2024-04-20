@@ -13,7 +13,12 @@ export default function Home({navigation}: HomeProps) {
   const restaurantCardDetails = (item: RestaurantItem) =>
     navigation.navigate('RestaurantDetails', {productId: item.info.id});
 
-  const {resList} = useRestaurantsList();
+  const {resList, filteredResList, setFilteredResList} = useRestaurantsList();
+
+  const handleFilterTopRatedRestaurants = () => {
+    const filteredList = resList.filter(list => list.info.avgRating >= 4.4);
+    setFilteredResList(filteredList); // Create a new array using spread syntax
+  };
 
   if (!resList.length) {
     return <RestaurantListShimmerUI />;
@@ -21,14 +26,20 @@ export default function Home({navigation}: HomeProps) {
 
   return (
     <>
-      <SearchBar />
-      <TouchableOpacity className="bg-blue-700 m-auto rounded-lg p-3   ">
+      <SearchBar
+        resList={resList}
+        filteredResList={filteredResList}
+        setFilteredResList={setFilteredResList}
+      />
+      <TouchableOpacity
+        className="bg-blue-700 m-auto rounded-lg p-3   "
+        onPress={handleFilterTopRatedRestaurants}>
         <Text className="text-white font-medium text-base">
           Top Rated Restaurants
         </Text>
       </TouchableOpacity>
       <RestaurantList
-        resList={resList}
+        filteredResList={filteredResList}
         restaurantCardDetails={restaurantCardDetails}
       />
     </>
@@ -37,4 +48,23 @@ export default function Home({navigation}: HomeProps) {
 
 /**
  * reslist yhaan chajye for loader ,toh that means props passing hogi
+ * 
+ * we cant do this 
+ *  const handleFilterTopRatedRestaurants = () => {
+    console.log('here');
+    return resList.filter(item => item.info.avgRating > 4.2);
+  };
+  as if we are making changes in reslist so we nedto rneder it also with new lsit of res
  */
+
+// setFilteredResList(prevState => {
+//   console.log('State before:\n', JSON.stringify(prevState, null, 2));
+//   const topRatedRestaurantsList = prevState.filter(
+//     list => list.info.avgRating > 4.4,
+//   );
+//   console.log(
+//     'State After:\n',
+//     JSON.stringify(topRatedRestaurantsList, null, 2),
+//   );
+//   return [...topRatedRestaurantsList];
+// });

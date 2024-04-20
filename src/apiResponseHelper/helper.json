@@ -1,0 +1,47 @@
+[
+  {
+    "id": "283662",
+    "name": "Aggarwal Vaishno Dhaba",
+    "cloudinaryImageId": "esmz6cacljnaizpx9l08",
+
+    "costForTwo": "₹250 for two",
+    "cuisines": ["Chinese", "Biryani", "Indian", "Punjabi", "Desserts"],
+    "avgRating": 4.5,
+
+    "avgRatingString": "4.5",
+
+    "sla": {
+      "slaString": "25-30 mins"
+    }
+  },
+  {
+    "id": "283661",
+    "name": "ARKAY",
+    "cloudinaryImageId": "esmz6cacljnaizpx9l08",
+
+    "costForTwo": "₹250 for two",
+    "cuisines": ["Chinese", "Biryani", "Indian", "Punjabi", "Desserts"],
+    "avgRating": 4.2,
+
+    "avgRatingString": "4.5",
+
+    "sla": {
+      "slaString": "25-30 mins"
+    }
+  },
+  {
+    "id": "283663",
+    "name": "mcd",
+    "cloudinaryImageId": "esmz6cacljnaizpx9l08",
+
+    "costForTwo": "₹250 for two",
+    "cuisines": ["Chinese", "Biryani", "Indian", "Punjabi", "Desserts"],
+    "avgRating": 4.5,
+
+    "avgRatingString": "4.5",
+
+    "sla": {
+      "slaString": "25-30 mins"
+    }
+  }
+]

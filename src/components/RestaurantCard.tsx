@@ -20,6 +20,10 @@ export default function RestaurantCard({resItem}: RestaurantCardProps) {
     cloudinaryImageId,
     avgRatingString,
   } = resItem.info;
+
+  // console.log('Rendering RestaurantCard with resItem:', resItem);
+
+  // console.log({name}, 'resItem');
   return (
     <View className="m-4 p-1 py-2 flex-1 flex-row h-48 rounded-lg border-[0.5px] border-slate-200 shadow-sm bg-white ">
       <View>

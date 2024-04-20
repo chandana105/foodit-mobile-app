@@ -9,4 +9,8 @@
   - top rated filter button designing
   - Dummy flatlist of all restaurnats list on restaurnats list page
   - fetching list of restaurants from api (for different platform api havign different structure)
-  - Shimmer UI 
+  - Shimmer UI (whole restaurant list page will be visible after restaurant list from api is being fetched)
+  - Search Filter list
+  - Top Rated Restaurants Filter list
+  - HOC VEG restaurant 
+  - Snackbar
