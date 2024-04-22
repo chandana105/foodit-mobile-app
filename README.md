@@ -13,4 +13,5 @@
   - Search Filter list
   - Top Rated Restaurants Filter list
   - HOC VEG restaurant 
-  - Snackbar
+  - Snackbar (Pending)
+  - cuisines display in slice 

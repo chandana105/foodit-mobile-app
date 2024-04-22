@@ -10,7 +10,6 @@ type SearchBarProps = PropsWithChildren<{
 
 export default function SearchBar({
   resList,
-  // filteredResList,
   setFilteredResList,
 }: SearchBarProps) {
   const [userInput, setUserInput] = useState('');
@@ -25,9 +24,6 @@ export default function SearchBar({
       setFilteredResList(resList);
     }
   };
-
-  // console.log('filteredResList before filtering:', filteredResList);
-  // console.log('userInput:', userInput);
 
   return (
     <View className=" rounded-lg  m-4 flex flex-row items-center bg-slate-300 pr-2">
