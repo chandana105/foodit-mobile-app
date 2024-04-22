@@ -1,0 +1,116 @@
+  [
+    {
+      "info": {
+        "id": "283662",
+        "name": "Aggarwal Vaishno Dhaba",
+        "cloudinaryImageId": "esmz6cacljnaizpx9l08",
+        "locality": "Model Town",
+        "areaName": "South_Jalandhar",
+        "costForTwo": "₹250 for two",
+        "cuisines": [
+          "Chinese",
+          "Biryani",
+          "Indian",
+          "Punjabi",
+          "Desserts"
+        ],
+        "avgRating": 4.5,
+        "parentId": "27734",
+        "avgRatingString": "4.5",
+        "totalRatingsString": "10K+",
+        "promoted": true,
+        "adTrackingId": "cid=12415372~p=0~adgrpid=12415372#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=283662~eid=c0063739-cc06-4b08-bff5-4a1d24a11b5f~srvts=1712647813421~collid=99966",
+        "sla": {
+          "deliveryTime": 29,
+          "lastMileTravel": 3,
+          "serviceability": "SERVICEABLE",
+          "slaString": "25-30 mins",
+          "lastMileTravelString": "3.0 km",
+          "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+          "nextCloseTime": "2024-04-09 23:00:00",
+          "opened": true
+        },
+        "badges": {
+          "imageBadges": [
+            {
+              "imageId": "Rxawards/_CATEGORY-North%20Indian.png",
+              "description": "Delivery!"
+            },
+            {
+              "imageId": "v1695133679/badges/Pure_Veg111.png",
+              "description": "pureveg"
+            }
+          ]
+        },
+        "isOpen": true,
+        "aggregatedDiscountInfoV2": {
+          "header": "₹100 OFF",
+          "shortDescriptionList": [
+            {
+              "meta": "Use FORFOODIE",
+              "discountType": "Flat",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "descriptionList": [
+            {
+              "meta": "Flat ₹100 off | Use FORFOODIE",
+              "discountType": "Flat",
+              "operationType": "RESTAURANT"
+            }
+          ]
+        },
+        "type": "F",
+        "badgesV2": {
+          "entityBadges": {
+            "imageBased": {
+              "badgeObject": [
+                {
+                  "attributes": {
+                    "description": "Delivery!",
+                    "imageId": "Rxawards/_CATEGORY-North%20Indian.png"
+                  }
+                },
+                {
+                  "attributes": {
+                    "description": "pureveg",
+                    "imageId": "v1695133679/badges/Pure_Veg111.png"
+                  }
+                }
+              ]
+            },
+            "textBased": {},
+            "textExtendedBadges": {}
+          }
+        },
+        "orderabilityCommunication": {
+          "title": {},
+          "subTitle": {},
+          "message": {},
+          "customIcon": {}
+        },
+        "differentiatedUi": {
+          "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+          "differentiatedUiMediaDetails": {
+            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+            "lottie": {},
+            "video": {}
+          }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "restaurantOfferPresentationInfo": {}
+      },
+      "analytics": {
+        "context": "seo-data-c706201f-d3d8-4bc4-83f9-fca24b689adc"
+      },
+      "cta": {
+        "link": "https://www.swiggy.com/restaurants/aggarwal-vaishno-dhaba-model-town-south-jalandhar-jalandhar-283662",
+        "text": "RESTAURANT_MENU",
+        "type": "WEBLINK"
+      },
+      "widgetId": "collectionV5RestaurantListWidget_byName"
+    },
+]

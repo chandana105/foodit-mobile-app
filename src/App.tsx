@@ -3,7 +3,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from './screens/Home';
 import RestaurantDetails from './screens/RestaurantDetails';
-import {Image} from 'react-native';
+import {Image, StatusBar} from 'react-native';
 import {LOGO_URL} from './utils/constants';
 import Icon from 'react-native-vector-icons/FontAwesome6';
 
@@ -21,6 +21,7 @@ const Profile = () => <Icon name="circle-user" size={25} color="#000" />;
 export default function App(): React.JSX.Element {
   return (
     <NavigationContainer>
+      <StatusBar />
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen
           name="Home"
@@ -42,3 +43,7 @@ export default function App(): React.JSX.Element {
     </NavigationContainer>
   );
 }
+
+/**
+ * virtualized lists should never be nested insidde plain Scrollview with the amew iorintation biecoanuse it can break windiowing and other fucntionality, - use another virtualized backed container instead
+ */
