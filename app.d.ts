@@ -10,6 +10,7 @@ interface RestaurantItem {
     costForTwo: string;
     cuisines: string[];
     avgRating: number;
+    veg: boolean;
     parentId: string;
     avgRatingString: string;
     totalRatingsString: string;

@@ -10,7 +10,9 @@ type RestaurantCardProps = PropsWithChildren<{
   resItem: RestaurantItem;
 }>;
 
-export default function RestaurantCard({resItem}: RestaurantCardProps) {
+type RestaurantCardComponent = React.ComponentType<RestaurantCardProps>;
+
+function RestaurantCard({resItem}: RestaurantCardProps) {
   const {
     name,
     avgRating,
@@ -21,11 +23,10 @@ export default function RestaurantCard({resItem}: RestaurantCardProps) {
     avgRatingString,
   } = resItem.info;
 
-  // console.log('Rendering RestaurantCard with resItem:', resItem);
+  console.log(JSON.stringify(resItem, null, 2));
 
-  // console.log({name}, 'resItem');
   return (
-    <View className="m-4 p-1 py-2 flex-1 flex-row h-48 rounded-lg border-[0.5px] border-slate-200 shadow-sm bg-white ">
+    <View className="m-4 p-1 py-2  flex-row h-48 rounded-lg border-[0.5px] border-slate-200 shadow-sm bg-white ">
       <View>
         <Image
           source={{
@@ -56,7 +57,8 @@ export default function RestaurantCard({resItem}: RestaurantCardProps) {
           <Text className="font-bold text-black text-sm">{sla.slaString}</Text>
         </View>
         <Text className="font-medium text-black text-sm">
-          {cuisines.join(', ')}
+          {cuisines.slice(0, 3).join(', ')}
+          {cuisines.length > 3 && ' ...'}
         </Text>
         <Text className="font-semibold text-black text-sm">{costForTwo}</Text>
       </View>
@@ -64,8 +66,17 @@ export default function RestaurantCard({resItem}: RestaurantCardProps) {
   );
 }
 
-/**
- * cardbody
- *  - cardimg
- *  - carddetials
- */
+export const withVegLabel = (WrappedComponent: RestaurantCardComponent) => {
+  return (props: RestaurantCardProps) => {
+    return (
+      <>
+        <View className="absolute bg-green-700 text-white  mx-2 my-2 px-4 py-2 z-10 rounded-lg ">
+          <Text className=" text-white font-bold">Veg</Text>
+        </View>
+        <WrappedComponent {...props} />
+      </>
+    );
+  };
+};
+
+export default RestaurantCard;

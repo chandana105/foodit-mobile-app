@@ -11,10 +11,11 @@
 - Dummy flatlist of all restaurnats list on restaurnats list page
 - fetching list of restaurants from api (for different platform api havign different structure)
 - Shimmer UI (whole restaurant list page will be visible after restaurant list from api is being fetched)
-- Search Filter list (pending)
-- Top Rated Restaurants Filter list (pending)
-- HOC VEG restaurant (pending)
-- Snackbar (pending)
+- Search Filter list
+- Top Rated Restaurants Filter list
+- HOC VEG restaurant
+- Snackbar (Pending)
+- cuisines display in slice
 
 ### restaurant Details page :-
 
