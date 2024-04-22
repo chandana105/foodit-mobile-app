@@ -1,9 +1,10 @@
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
 import React, {useEffect} from 'react';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '../App';
 import useRestaurantMenu from '../hooks/useRestaurantMenu';
 import RestaurantListShimmerUI from '../components/RestaurantListShimmerUI';
+import RestaurantDetailsHeader from '../components/RestaurantDetailsHeader';
 
 type RestaurantDetailsProps = NativeStackScreenProps<
   RootStackParamList,
@@ -32,14 +33,9 @@ export default function RestaurantDetails({
     return <RestaurantListShimmerUI />;
   }
 
-  const {name, cuisines, costForTwoMessage, cloudinaryImageId} =
-    resInfo?.cards[2]?.card?.card?.info;
-
   return (
     <View>
-      <Text>
-        RestaurantDetails {resId} {name}
-      </Text>
+      <RestaurantDetailsHeader resInfo={resInfo} />
     </View>
   );
 }

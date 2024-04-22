@@ -1841,3 +1841,187 @@
   "firstOffsetRequest": true,
   "isQCLink": false
 }
+
+
+
+
+// ratings card 
+  {
+  "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+  "info": {
+    "id": "284183",
+    "name": "Food Bazar",
+    "city": "Jalandhar",
+    "slugs": {
+      "restaurant": "food-bazar-jalandhar_central-jalandhar_central-2",
+      "city": "jalandhar"
+    },
+    "uniqueId": "e51e6528-4859-48c8-8fed-e84c17dc2d76",
+    "cloudinaryImageId": "krksmdiz1ggkiqvkpdcb",
+    "locality": "Model Town",
+    "areaName": "Model Town",
+    "costForTwo": "35000",
+    "costForTwoMessage": "₹350 for two",
+    "cuisines": [
+      "North Indian",
+      "Snacks"
+    ],
+    "avgRating": 4.6,
+    "veg": true,
+    "feeDetails": {
+      "restaurantId": "284183",
+      "fees": [
+        {
+          "name": "TYPE_DISTANCE"
+        },
+        {
+          "name": "TYPE_TIME"
+        }
+      ],
+      "title": "Delivery Charge",
+      "amount": "0"
+    },
+    "parentId": "80979",
+    "avgRatingString": "4.6",
+    "totalRatingsString": "10K+ ratings",
+    "sla": {
+      "restaurantId": "284183",
+      "deliveryTime": 26,
+      "minDeliveryTime": 25,
+      "maxDeliveryTime": 30,
+      "lastMileTravel": 2.3,
+      "serviceability": "SERVICEABLE",
+      "stressFactor": 1,
+      "rainMode": "RAIN_MODE_NONE",
+      "longDistance": "LONG_DISTANCE_NOT_LONG_DISTANCE",
+      "zoneId": 3260,
+      "slaString": "25-30 MINS",
+      "lastMileTravelString": "2.2 km",
+      "iconType": "ICON_TYPE_EMPTY"
+    },
+    "availability": {
+      "nextCloseTime": "2024-04-22 23:00:00",
+      "visibility": true,
+      "opened": true,
+      "restaurantClosedMeta": {}
+    },
+    "aggregatedDiscountInfo": {
+      "header": "FLAT75 off",
+      "shortDescriptionList": [
+        {
+          "meta": "FLAT75 off | Use FLATDEAL",
+          "discountType": "Flat",
+          "operationType": "RESTAURANT"
+        },
+        {
+          "meta": "40% off | Use TRYNEW",
+          "discountType": "Percentage",
+          "operationType": "RESTAURANT"
+        }
+      ],
+      "descriptionList": [
+        {
+          "meta": "FLAT75 off | Use FLATDEAL",
+          "discountType": "Flat",
+          "operationType": "RESTAURANT"
+        },
+        {
+          "meta": "40% off up to ₹80 | Use code TRYNEW",
+          "discountType": "Percentage",
+          "operationType": "RESTAURANT"
+        }
+      ],
+      "visible": true
+    },
+    "badges": {},
+    "slugString": "food-bazar-jalandhar_central-jalandhar_central-2",
+    "isOpen": true,
+    "labels": [
+      {
+        "title": "Timings",
+        "message": "null"
+      },
+      {
+        "title": "Address",
+        "message": " At Madan Flour Mills Compound, Ladowali Road, Fentonganj, Jalandhar, Punjab 144001"
+      },
+      {
+        "title": "Cuisines",
+        "message": "North Indian,Snacks"
+      }
+    ],
+    "totalRatings": 10000,
+    "aggregatedDiscountInfoV2": {
+      "header": "FLAT75 off",
+      "shortDescriptionList": [
+        {
+          "meta": "FLAT75 off | Use FLATDEAL",
+          "discountType": "Flat",
+          "operationType": "RESTAURANT"
+        },
+        {
+          "meta": "40% off | Use TRYNEW",
+          "discountType": "Percentage",
+          "operationType": "RESTAURANT"
+        }
+      ],
+      "descriptionList": [
+        {
+          "meta": "FLAT75 off | Use FLATDEAL",
+          "discountType": "Flat",
+          "operationType": "RESTAURANT"
+        },
+        {
+          "meta": "40% off up to ₹80 | Use code TRYNEW",
+          "discountType": "Percentage",
+          "operationType": "RESTAURANT"
+        }
+      ],
+      "couponDetailsCta": "View coupon details"
+    },
+    "type": "F",
+    "nudgeBanners": [
+      {
+        "minValue": 139,
+        "maxValue": 199,
+        "priority": 1,
+        "couponCode": "FLATDEAL",
+        "discountInfo": {
+          "discountType": "Flat",
+          "value": 75
+        },
+        "lockedMessage": "Add items worth ₹<amount> to save ₹75 | Code FLATDEAL",
+        "unlockedMessage": "FLATDEAL Coupon Unlocked! Use it to save ₹75",
+        "logoCtx": {}
+      }
+    ],
+    "headerBanner": {
+      "url": "swiggy://webview?is_external=false&webview_url=https://www.swiggy.com/restaurant-info/284183"
+    },
+    "generalPurposeInfoListV2": [
+      {
+        "cta": {
+          "info": {
+            "recordings": {}
+          },
+          "linkCta": {}
+        }
+      }
+    ],
+    "ratingSlab": "RATING_SLAB_5",
+    "orderabilityCommunication": {
+      "title": {},
+      "subTitle": {},
+      "message": {},
+      "customIcon": {}
+    },
+    "hasBestsellerItems": true,
+    "cartOrderabilityNudgeBanner": {
+      "parameters": {},
+      "presentation": {}
+    },
+    "latLong": "31.32686426,75.58899187",
+    "backgroundImageOverlayInfo": {}
+  },
+  "analytics": {}
+}
