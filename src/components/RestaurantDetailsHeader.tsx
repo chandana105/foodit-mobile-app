@@ -15,10 +15,10 @@ export default function RestaurantDetailsHeader({resInfo}: any) {
     totalRatingsString,
   } = resInfo?.cards[2]?.card?.card?.info;
 
-  console.log(JSON.stringify(resInfo?.cards[2]?.card?.card, null, 2));
+  // console.log(JSON.stringify(resInfo?.cards[2]?.card?.card, null, 2));
 
   return (
-    <View className="m-4 px-2 py-4 flex-row justify-between items-baseline rounded-xl border-[0.5px] border-slate-200 shadow-sm bg-white ">
+    <View className="m-4 px-2 py-4 flex-row justify-between items-center rounded-xl border-[0.5px] border-slate-200 shadow-sm bg-white ">
       {/* description */}
       <View className="px-2 gap-1 flex-1">
         <Text className="font-bold text-lg text-black">{name}</Text>
@@ -34,22 +34,22 @@ export default function RestaurantDetailsHeader({resInfo}: any) {
         </Text>
       </View>
       {/* rating */}
-      <View className="flex-col gap-1 px-1">
+      <View className="flex-col gap-1 px-1 items-center ">
         <View className="flex flex-row items-center">
           {avgRating ? (
-            <View className="flex-row items-center bg-green-800 p-1 px-2 rounded-lg">
+            <View className="flex-row items-center  bg-green-800 p-1 px-2 rounded-lg">
               <Icon name="star" size={15} color="#fff" />
-              <Text className="font-bold text-white ml-1 text-sm">
+              <Text className="font-bold text-white ml-1 text-sm ">
                 {avgRating}
               </Text>
             </View>
           ) : (
-            <>
+            <View className="flex-row items-center bg-yellow-300 p-1 px-2 rounded-lg">
               <IconLabel name="label-important" size={25} color="#fa0" />
               <Text className="font-bold text-black ml-1 text-sm">
                 {avgRatingString}
               </Text>
-            </>
+            </View>
           )}
         </View>
         <Text className="text-xs text-gray-500">{totalRatingsString}</Text>

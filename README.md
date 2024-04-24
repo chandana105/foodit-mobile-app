@@ -14,7 +14,6 @@
 - Search Filter list
 - Top Rated Restaurants Filter list
 - HOC VEG restaurant
-- Snackbar (Pending)
 - cuisines display in slice
 
 ### restaurant Details page :-
@@ -22,3 +21,12 @@
 - fetching restaurant menu details using resId (useRestaurantMenu)
 - setting up the header menu icon on top of resDetails page
 - make a header type design for particular restaurant detail (resInfo card)
+- Menu display (menu categories) 
+   - creating flatlist for each menu category with item seperator as a line 
+     - menu category item will be card similar as detailed header
+   - that menu category list should be toggled (open and close)
+   - then same as all menu categories list should be rendered
+- on click of Add Button :- 
+  - Snackbar showing 1 item added
+
+
