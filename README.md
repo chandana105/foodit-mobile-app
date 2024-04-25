@@ -15,6 +15,7 @@
 - Top Rated Restaurants Filter list
 - HOC VEG restaurant
 - cuisines display in slice
+- TODO: if no filtered / resList length is 0 in starting or on fitlers :- display No Restaurants Text.
 
 ### restaurant Details page :-
 

@@ -1,10 +1,11 @@
-import {FlatList, Platform, Pressable, Text, View} from 'react-native';
-import React, {useEffect} from 'react';
+import {Platform, Text, View} from 'react-native';
+import React, {useEffect, useRef, useState} from 'react';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '../App';
 import useRestaurantMenu from '../hooks/useRestaurantMenu';
 import RestaurantListShimmerUI from '../components/RestaurantListShimmerUI';
 import RestaurantDetailsHeader from '../components/RestaurantDetailsHeader';
+import RestaurantMenuList from '../components/RestaurantMenuList';
 
 type RestaurantDetailsProps = NativeStackScreenProps<
   RootStackParamList,
@@ -19,20 +20,6 @@ export default function RestaurantDetails({
 
   const resInfo = useRestaurantMenu(resId);
 
-  useEffect(() => {
-    if (resInfo !== null) {
-      const {cloudinaryImageId} = resInfo?.cards[2]?.card?.card?.info;
-
-      navigation.setParams({
-        cloudinaryImageId: cloudinaryImageId,
-      });
-    }
-  }, [navigation, resInfo]);
-
-  if (resInfo === null) {
-    return <RestaurantListShimmerUI />;
-  }
-
   let cardsIndex = 0;
   if (Platform.OS === 'android') {
     cardsIndex = 4;
@@ -40,49 +27,58 @@ export default function RestaurantDetails({
     cardsIndex = 5;
   }
 
-  const categoryList = resInfo?.cards[
-    cardsIndex
-  ]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
-    (category: any) =>
-      category?.card?.card?.['@type'] ===
-      'type.googleapis.com/swiggy.presentation.food.v2.ItemCategory',
-  );
+  const categoryListRef = useRef<any[]>([]);
 
-  console.log(JSON.stringify(categoryList[0]?.card?.card?.title, null, 2));
+  const [activeIndex, setActiveIndex] = useState<number[]>([]);
 
-  return (
+  useEffect(() => {
+    if (resInfo !== null) {
+      const {cloudinaryImageId} = resInfo?.cards[2]?.card?.card?.info;
+
+      navigation.setParams({
+        cloudinaryImageId: cloudinaryImageId,
+      });
+
+      if (
+        categoryListRef.current.length !==
+        resInfo?.cards[cardsIndex]?.groupedCard?.cardGroupMap?.REGULAR?.cards
+          ?.length
+      ) {
+        categoryListRef.current = resInfo?.cards[
+          cardsIndex
+        ]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
+          (category: any) =>
+            category?.card?.card?.['@type'] ===
+            'type.googleapis.com/swiggy.presentation.food.v2.ItemCategory',
+        );
+
+        setActiveIndex(
+          Array.from({length: categoryListRef.current.length}, (_, i) => i),
+        );
+      }
+    }
+  }, [navigation, resInfo, cardsIndex]);
+
+  // console.log({activeIndex});
+
+  const setActiveIndexProps = (index: number) => {
+    if (activeIndex.includes(index)) {
+      setActiveIndex(activeIndex.filter(i => i !== index));
+    } else {
+      setActiveIndex([...activeIndex, index]);
+    }
+  };
+  return resInfo === null ? (
+    <RestaurantListShimmerUI />
+  ) : (
     <View>
       <RestaurantDetailsHeader resInfo={resInfo} />
       {/* Menu */}
-      <Text className="text-center text-xl font-semibold">Menu</Text>
-      {/* <Text>{categoryList[0]?.card?.card.title}</Text>
-      {/* categroy title ki flatlist krni */}
-      {/* <Text>{categoryList[0]?.card?.card.itemCards[0]?.card?.info?.name}</Text>  */}
-
-      <FlatList
-        data={categoryList}
-        keyExtractor={item => item?.card?.card.title}
-        className="my-4"
-        renderItem={({item}) => (
-          <View key={item?.card?.card.title}>
-            <Text className="text-lg">{item?.card?.card.title}</Text>
-            {/* render another flatlist contoaning itemcards info */}
-            {/* <Text>{item?.card?.card.itemCards[0]?.card?.info?.name}</Text> */}
-
-            <FlatList
-              data={item?.card?.card.itemCards}
-              keyExtractor={item1 => item1?.card?.info.id}
-              className="my-4"
-              renderItem={({item}) => (
-                <View key={item?.card?.info.id}>
-                  <Text className=" text-orange-700">
-                    {item?.card?.info.name}
-                  </Text>
-                </View>
-              )}
-            />
-          </View>
-        )}
+      <Text className="text-center text-xl font-semibold text-black">Menu</Text>
+      <RestaurantMenuList
+        categoryList={categoryListRef.current}
+        activeIndex={activeIndex}
+        setActiveIndex={(index: any) => setActiveIndexProps(index)}
       />
     </View>
   );
