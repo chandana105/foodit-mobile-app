@@ -45,3 +45,42 @@
     }
   }
 ]
+
+
+// menu page 
+LOG  {
+  "card": {
+    "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+    "info": {
+      "id": "61264522",
+      "name": "Chocolate Brownie",
+      "category": "Desserts & Beverages",
+      "description": "Serves 1 | Perfect fudge square of chocolate topped with hot chocolate sauce. Kcal - 674",
+      "imageId": "zwj7h2gdkh7sbhipej7y",
+      "inStock": 1,
+      "isVeg": 1,
+      "price": 14900,
+      "variants": {},
+      "variantsV2": {},
+      "itemAttribute": {
+        "vegClassifier": "VEG",
+        "portionSize": "Serves 1"
+      },
+      "ribbon": {},
+      "type": "ITEM",
+      "itemBadge": {},
+      "badgesV2": {},
+      "ratings": {
+        "aggregatedRating": {
+          "rating": "4.7",
+          "ratingCount": "20 ratings",
+          "ratingCountV2": "20"
+        }
+      }
+    },
+    "analytics": {},
+    "hideRestaurantDetails": true
+  }
+}
+
+

@@ -11,11 +11,15 @@ const useRestaurantMenu = (resId: string) => {
   const url = `${MENU_API_START_URL}${resId}${MENU_API_END_URL}`;
 
   const fetchMenu = async () => {
-    const response = await fetch(url);
+    try {
+      const response = await fetch(url);
 
-    const json = await response.json();
+      const json = await response.json();
 
-    setResInfo(json.data);
+      setResInfo(json.data);
+    } catch (error) {
+      console.log({error});
+    }
   };
 
   return resInfo;

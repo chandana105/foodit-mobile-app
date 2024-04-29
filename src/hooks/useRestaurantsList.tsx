@@ -11,24 +11,28 @@ const useRestaurantsList = () => {
   }, []);
 
   const fetchData = async () => {
-    const response = await fetch(RESTAURANTS_LIST_URL);
+    try {
+      const response = await fetch(RESTAURANTS_LIST_URL);
 
-    const json = await response.json();
+      const json = await response.json();
 
-    let cardsIndex = 0;
-    if (Platform.OS === 'android') {
-      cardsIndex = 4;
-    } else if (Platform.OS === 'ios') {
-      cardsIndex = 2;
-    }
+      let cardsIndex = 0;
+      if (Platform.OS === 'android') {
+        cardsIndex = 4;
+      } else if (Platform.OS === 'ios') {
+        cardsIndex = 2;
+      }
 
-    const restaurants =
-      json?.data?.cards[cardsIndex]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants;
+      const restaurants =
+        json?.data?.cards[cardsIndex]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants;
 
-    if (restaurants) {
-      setResList(restaurants);
-      setFilteredResList(restaurants);
+      if (restaurants) {
+        setResList(restaurants);
+        setFilteredResList(restaurants);
+      }
+    } catch (error) {
+      console.log({error});
     }
   };
 

@@ -1,5 +1,11 @@
-import {View, Text, FlatList} from 'react-native';
+import {FlatList, View} from 'react-native';
 import React from 'react';
+
+import MenuListItem from './MenuListItem';
+
+const ItemSeperator = () => {
+  return <View className="h-[0.5] bg-gray-300" />;
+};
 
 export default function RestaurantMenuListItems({item}: any) {
   return (
@@ -7,15 +13,8 @@ export default function RestaurantMenuListItems({item}: any) {
       data={item?.card?.card.itemCards}
       keyExtractor={item1 => item1?.card?.info.id}
       className="my-4"
-      renderItem={({item}) => (
-        <View
-          key={item?.card?.info.id}
-          //   style={{display: index !== activeIndex ? 'flex' : 'none'}}
-        >
-          <Text className=" text-orange-700">{item?.card?.info.name}</Text>
-          {/* inke beeech mein item sep lgana hai */}
-        </View>
-      )}
+      ItemSeparatorComponent={() => ItemSeperator()}
+      renderItem={({item}) => <MenuListItem item={item} />}
     />
   );
 }
