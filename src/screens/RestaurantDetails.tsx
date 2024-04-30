@@ -3,10 +3,10 @@ import React from 'react';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '../App';
 import useRestaurantMenu from '../hooks/useRestaurantMenu';
-import RestaurantListShimmerUI from '../components/RestaurantListShimmerUI';
-import RestaurantDetailsHeader from '../components/RestaurantDetailsHeader';
-import RestaurantMenuList from '../components/RestaurantMenuList';
+import RestaurantDetailsHeader from '../components/RestaurantDetailsScreen/RestaurantDetailsHeader';
+import RestaurantMenuList from '../components/RestaurantDetailsScreen/RestaurantMenuList';
 import useRestaurantDetails from '../hooks/useRestaurantDetails';
+import RestaurantDetailsShimmerUI from '../components/RestaurantDetailsScreen/RestaurantDetailsShimmerUI';
 
 type RestaurantDetailsProps = NativeStackScreenProps<
   RootStackParamList,
@@ -25,7 +25,7 @@ export default function RestaurantDetails({
     useRestaurantDetails(resInfo, navigation);
 
   return !categoryListRef.current.length ? (
-    <RestaurantListShimmerUI />
+    <RestaurantDetailsShimmerUI />
   ) : (
     <View>
       <RestaurantDetailsHeader resInfo={resInfo} />

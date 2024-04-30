@@ -15,7 +15,9 @@
 - Top Rated Restaurants Filter list
 - HOC VEG restaurant
 - cuisines display in slice
-- TODO: if no filtered / resList length is 0 in starting or on fitlers :- display No Restaurants Text.
+- if no filtered / resList length is 0 in starting or on fitlers :- display No Restaurants Text.
+- TODO: if no restaurants on top rated filter , then user should be able to remove that filter again
+- TODO: onRefresh of Flatlist (to fetch new list of restaurants if user wants)
 
 ### restaurant Details page :-
 
@@ -28,7 +30,9 @@
   - that menu category list should be toggled (open and close)
   - then same as all menu categories list should be rendered
   - Restaurant Menu Page Shimmer UI
-- on click of Add Button :-
+
+### Cart Page  
+- on click of Add Button in Restaurant Menu List page :-
   - Snackbar showing 1 item added
 
 ## Scereenshots
@@ -36,3 +40,5 @@
 ![Alt text](src/assets/1.png)
 ![Alt text](src/assets/2.png)
 ![Alt text](src/assets/3.png)
+
+## Video recording till Restaurant Menu List Page

@@ -15,8 +15,6 @@ export default function RestaurantDetailsHeader({resInfo}: any) {
     totalRatingsString,
   } = resInfo?.cards[2]?.card?.card?.info;
 
-  // console.log(JSON.stringify(resInfo?.cards[2]?.card?.card, null, 2));
-
   return (
     <View className="m-4 px-2 py-4 flex-row justify-between items-center rounded-xl border-[0.5px] border-slate-200 shadow-sm bg-white ">
       {/* description */}

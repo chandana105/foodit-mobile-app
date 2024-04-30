@@ -1,7 +1,7 @@
 import React, {useState, memo} from 'react';
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import {CDN_URL} from '../utils/constants';
+import {CDN_URL} from '../../utils/constants';
 
 const MenuListItem = memo(({item}: any) => {
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);

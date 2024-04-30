@@ -2,9 +2,9 @@ import {Text, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '../App';
-import SearchBar from '../components/SearchBar';
-import RestaurantList from '../components/RestaurantList';
-import RestaurantListShimmerUI from '../components/RestaurantListShimmerUI';
+import SearchBar from '../components/HomeScreen/SearchBar';
+import RestaurantList from '../components/HomeScreen/RestaurantList';
+import RestaurantListShimmerUI from '../components/HomeScreen/RestaurantListShimmerUI';
 import useRestaurantsList from '../hooks/useRestaurantsList';
 
 type HomeProps = NativeStackScreenProps<RootStackParamList, 'Home'>;
