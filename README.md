@@ -27,6 +27,7 @@
     - menu category item will be card similar as detailed header
   - that menu category list should be toggled (open and close)
   - then same as all menu categories list should be rendered
+  - Restaurant Menu Page Shimmer UI
 - on click of Add Button :-
   - Snackbar showing 1 item added
 
