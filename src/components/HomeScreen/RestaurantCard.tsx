@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import IconDot from 'react-native-vector-icons/Entypo';
 import IconLabel from 'react-native-vector-icons/MaterialIcons';
 
-import {CDN_URL} from '../utils/constants';
+import {CDN_URL} from '../../utils/constants';
 
 type RestaurantCardProps = PropsWithChildren<{
   resItem: RestaurantItem;
@@ -22,8 +22,6 @@ function RestaurantCard({resItem}: RestaurantCardProps) {
     cloudinaryImageId,
     avgRatingString,
   } = resItem.info;
-
-  console.log(JSON.stringify(resItem, null, 2));
 
   return (
     <View className="m-4 p-1 py-2  flex-row h-48 rounded-lg border-[0.5px] border-slate-200 shadow-sm bg-white ">
