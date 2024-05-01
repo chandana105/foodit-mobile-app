@@ -42,3 +42,13 @@
 ![Alt text](src/assets/3.png)
 
 ## Video recording till Restaurant Menu List Page
+
+
+https://github.com/chandana105/food-ordering-mobile-app/assets/39641650/04200459-fbb1-4729-8259-410e8afd1efa
+
+
+
+
+
+
+
