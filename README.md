@@ -31,10 +31,15 @@
   - then same as all menu categories list should be rendered
   - Restaurant Menu Page Shimmer UI
 
-### Cart Page  
+### Cart Page
+
 - on click of Add Button in Restaurant Menu List page :-
   - Designing "1 item added" component for a particular restaurant where the add button is clicked. It should be above the scrolling Flatlist as behind that component the list should be able to get scrolled.
   - can think of adding Animation while adding item (OPTIONAL)
+- On Home Page (need to show the cart items added)
+  - to make the cartInfo box with different styles here also. 
+  - (can hide above box when scrolling down and show when scrolling up on Home Page) (OPTIONAL)
+
 
 ## Scereenshots
 
@@ -44,12 +49,4 @@
 
 ## Video recording till Restaurant Menu List Page
 
-
 https://github.com/chandana105/food-ordering-mobile-app/assets/39641650/04200459-fbb1-4729-8259-410e8afd1efa
-
-
-
-
-
-
-

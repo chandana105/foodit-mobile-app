@@ -1,4 +1,4 @@
-import {Text, TouchableOpacity} from 'react-native';
+import {Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '../App';
@@ -6,6 +6,7 @@ import SearchBar from '../components/HomeScreen/SearchBar';
 import RestaurantList from '../components/HomeScreen/RestaurantList';
 import RestaurantListShimmerUI from '../components/HomeScreen/RestaurantListShimmerUI';
 import useRestaurantsList from '../hooks/useRestaurantsList';
+import HomeCartDetails from '../components/HomeScreen/HomeCartDetails';
 
 type HomeProps = NativeStackScreenProps<RootStackParamList, 'Home'>;
 
@@ -28,7 +29,7 @@ export default function Home({navigation}: HomeProps) {
   }
 
   return (
-    <>
+    <View className="flex-1">
       <SearchBar
         resList={resList}
         filteredResList={filteredResList}
@@ -45,6 +46,7 @@ export default function Home({navigation}: HomeProps) {
         filteredResList={filteredResList}
         restaurantCardDetails={restaurantCardDetails}
       />
-    </>
+      <HomeCartDetails />
+    </View>
   );
 }
