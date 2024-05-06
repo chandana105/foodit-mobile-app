@@ -33,7 +33,8 @@
 
 ### Cart Page  
 - on click of Add Button in Restaurant Menu List page :-
-  - Snackbar showing 1 item added
+  - Designing "1 item added" component for a particular restaurant where the add button is clicked. It should be above the scrolling Flatlist as behind that component the list should be able to get scrolled.
+  - can think of adding Animation while adding item (OPTIONAL)
 
 ## Scereenshots
 

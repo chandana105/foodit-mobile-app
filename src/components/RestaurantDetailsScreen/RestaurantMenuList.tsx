@@ -18,7 +18,7 @@ const RestaurantMenuList = memo(
             <Pressable
               className="flex-row justify-between items-center "
               onPress={() => setActiveIndex(index)}>
-              <Text className="text-2xl text-black font-bold text-center">
+              <Text className="text-2xl text-black font-bold  flex-1">
                 {item?.card?.card.title} ({item?.card?.card.itemCards.length}){' '}
               </Text>
               <Text className="text-lg">
