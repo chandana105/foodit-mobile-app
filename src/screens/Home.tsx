@@ -7,6 +7,7 @@ import RestaurantList from '../components/HomeScreen/RestaurantList';
 import RestaurantListShimmerUI from '../components/HomeScreen/RestaurantListShimmerUI';
 import useRestaurantsList from '../hooks/useRestaurantsList';
 import HomeCartDetails from '../components/HomeScreen/HomeCartDetails';
+import CartReplaceModal from '../components/RestaurantDetailsScreen/CartReplaceModal';
 import CartDeleteModal from '../components/HomeScreen/CartDeleteModal';
 
 type HomeProps = NativeStackScreenProps<RootStackParamList, 'Home'>;
@@ -55,6 +56,10 @@ export default function Home({navigation}: HomeProps) {
       {/* here button method will go */}
       <HomeCartDetails toggleModal={toggleModal} />
       {/* herem Modal */}
+      {/* <CartReplaceModal
+        isModalVisible={isModalVisible}
+        toggleModal={toggleModal}
+      /> */}
       <CartDeleteModal
         isModalVisible={isModalVisible}
         toggleModal={toggleModal}
