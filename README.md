@@ -2,6 +2,7 @@
 
 - navigation (stack)
 - home page of all food items list
+- TODO: FONT THEME NOT PUT TILL NOW , TO ADD IT
 
 ### home page :-
 
@@ -37,9 +38,10 @@
   - Designing "1 item added" component for a particular restaurant where the add button is clicked. It should be above the scrolling Flatlist as behind that component the list should be able to get scrolled.
   - can think of adding Animation while adding item (OPTIONAL)
 - On Home Page (need to show the cart items added)
-  - to make the cartInfo box with different styles here also. 
+  - to make the cartInfo box with different styles here also.
   - (can hide above box when scrolling down and show when scrolling up on Home Page) (OPTIONAL)
-
+- On Home Page :- "CartDeleteModal"
+- On any Restaurant's details page while selecting an item from that restaurant when cart is already there, then Show "ReplaceCartModal".
 
 ## Scereenshots
 

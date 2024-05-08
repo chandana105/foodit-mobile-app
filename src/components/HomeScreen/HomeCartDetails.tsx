@@ -1,9 +1,13 @@
 import {View, Text, Image, Pressable} from 'react-native';
-import React from 'react';
+import React, {PropsWithChildren} from 'react';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {CDN_URL} from '../../utils/constants';
 
-export default function HomeCartDetails() {
+type HomeCartDetailsProps = PropsWithChildren<{
+  toggleModal: () => void;
+}>;
+
+export default function HomeCartDetails({toggleModal}: HomeCartDetailsProps) {
   return (
     <View
       className="absolute bottom-2 left-0 right-0 z-50 px-3 py-5 rounded-xl border border-gray-200 bg-white shadow-lg
@@ -28,9 +32,11 @@ export default function HomeCartDetails() {
         </Text>
         <Text className="text-white font-bold text-lg">Checkout</Text>
       </Pressable>
-      <View className="bg-red-100 h-full p-2 rounded-lg flex items-center justify-center">
+      <Pressable
+        className="bg-red-100 h-full p-2 rounded-lg flex items-center justify-center"
+        onPress={toggleModal}>
         <Icon name="delete" size={25} color="#c00" />
-      </View>
+      </Pressable>
     </View>
   );
 }
