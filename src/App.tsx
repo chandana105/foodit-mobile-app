@@ -6,10 +6,12 @@ import RestaurantDetails from './screens/RestaurantDetails';
 import {Image, StatusBar} from 'react-native';
 import {CDN_URL, LOGO_URL} from './utils/constants';
 import Icon from 'react-native-vector-icons/FontAwesome6';
+import Cart from './screens/Cart';
 
 export type RootStackParamList = {
   Home: undefined;
   RestaurantDetails: {resId: string; cloudinaryImageId: string};
+  Cart: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -48,6 +50,11 @@ export default function App(): React.JSX.Element {
             headerTitle: () => RestaurantLogo(route.params.cloudinaryImageId),
             headerTitleAlign: 'center',
           })}
+        />
+        <Stack.Screen
+          name="Cart"
+          component={Cart}
+          options={{presentation: 'modal', headerShown: false}}
         />
       </Stack.Navigator>
     </NavigationContainer>

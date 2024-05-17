@@ -42,6 +42,17 @@
   - (can hide above box when scrolling down and show when scrolling up on Home Page) (OPTIONAL)
 - On Home Page :- "CartDeleteModal"
 - On any Restaurant's details page while selecting an item from that restaurant when cart is already there, then Show "ReplaceCartModal".
+- View Cart Design
+- CART FUNCTIONALITY :- 
+  - when click on ADD button, to console.log show res id and item name. 
+  - TODO: resId to be not be prop drilled. (to try to use redux toolkit for this)
+    console.log(resId, item?.card?.info?.name)
+    ( LOG  284183 Jammu Poori, Aloo, Chana [2 Pcs]
+      LOG  284183 Chana Bhatura [2 Pcs]
+      LOG  324765 Melts Meal for 1 with Fries - Veg
+      LOG  324765 Melts Meal for 1 with Fries Non-Veg)
+
+  
 
 ## Scereenshots
 

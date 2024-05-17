@@ -2,12 +2,14 @@ import {View, Text, Image, Pressable} from 'react-native';
 import React, {PropsWithChildren} from 'react';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {CDN_URL} from '../../utils/constants';
+import {useNavigation} from '@react-navigation/native';
 
 type HomeCartDetailsProps = PropsWithChildren<{
   toggleModal: () => void;
 }>;
 
 export default function HomeCartDetails({toggleModal}: HomeCartDetailsProps) {
+  const navigation = useNavigation();
   return (
     <View
       className="absolute bottom-2 left-0 right-0 z-50 px-3 py-5 rounded-xl border border-gray-200 bg-white shadow-lg
@@ -26,7 +28,9 @@ export default function HomeCartDetails({toggleModal}: HomeCartDetailsProps) {
           </Text>
         </Pressable>
       </View>
-      <Pressable className="flex-col bg-green-600 py-2 px-4 rounded-lg items-center">
+      <Pressable
+        className="flex-col bg-green-600 py-2 px-4 rounded-lg items-center"
+        onPress={() => navigation.navigate('Cart')}>
         <Text className="text-white font-semibold text-base">
           2 Items | ₹299
         </Text>

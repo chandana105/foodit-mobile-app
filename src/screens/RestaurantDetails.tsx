@@ -25,6 +25,10 @@ export default function RestaurantDetails({
   const {categoryListRef, activeIndex, setActiveIndexProps} =
     useRestaurantDetails(resInfo, navigation);
 
+  // console.log(JSON.stringify(categoryListRef.current, null, 2));
+  // console.log(JSON.stringify(resInfo, null, 2));
+  // console.log({resId});
+
   return !categoryListRef.current.length ? (
     <RestaurantDetailsShimmerUI />
   ) : (
@@ -36,6 +40,7 @@ export default function RestaurantDetails({
         categoryList={categoryListRef.current}
         activeIndex={activeIndex}
         setActiveIndex={(index: any) => setActiveIndexProps(index)}
+        resId={resId}
       />
       <CartInfoFooter />
     </View>

@@ -3,7 +3,7 @@ import {View, Text, Image, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {CDN_URL} from '../../utils/constants';
 
-const MenuListItem = memo(({item}: any) => {
+const MenuListItem = memo(({item, resId}: any) => {
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
 
   const toggleDescriptionExpansion = () => {
@@ -69,7 +69,9 @@ const MenuListItem = memo(({item}: any) => {
             className="w-40 h-32 rounded-lg"
           />
           <View>
-            <TouchableOpacity className="-mt-5 flex items-center justify-center mx-auto px-10 py-2 bg-white rounded-md border border-gray-200 border-solid shadow-lg">
+            <TouchableOpacity
+              className="-mt-5 flex items-center justify-center mx-auto px-10 py-2 bg-white rounded-md border border-gray-200 border-solid shadow-lg"
+              onPress={() => console.log(resId, item?.card?.info?.name)}>
               <Text className="text-green-600 text-lg uppercase font-bold">
                 Add
               </Text>
@@ -78,7 +80,9 @@ const MenuListItem = memo(({item}: any) => {
         </View>
       ) : (
         <View className="w-40">
-          <TouchableOpacity className="flex items-center justify-center mx-auto px-10 py-2 bg-white rounded-md border border-gray-200 border-solid shadow-lg">
+          <TouchableOpacity
+            className="flex items-center justify-center mx-auto px-10 py-2 bg-white rounded-md border border-gray-200 border-solid shadow-lg"
+            onPress={() => console.log(resId, item?.card?.info?.name)}>
             <Text className="text-green-600 text-lg uppercase font-bold">
               Add
             </Text>

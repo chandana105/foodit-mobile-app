@@ -4,7 +4,7 @@ import RestaurantMenuListItems from './RestaurantMenuListItems';
 import Icon from 'react-native-vector-icons/AntDesign';
 
 const RestaurantMenuList = memo(
-  ({categoryList, activeIndex, setActiveIndex}: any) => {
+  ({categoryList, activeIndex, setActiveIndex, resId}: any) => {
     return (
       <FlatList
         data={categoryList}
@@ -30,7 +30,7 @@ const RestaurantMenuList = memo(
               </Text>
             </Pressable>
             {activeIndex.includes(index) && (
-              <RestaurantMenuListItems item={item} />
+              <RestaurantMenuListItems item={item} resId={resId} />
             )}
           </View>
         )}
