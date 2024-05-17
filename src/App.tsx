@@ -7,6 +7,8 @@ import {Image, StatusBar} from 'react-native';
 import {CDN_URL, LOGO_URL} from './utils/constants';
 import Icon from 'react-native-vector-icons/FontAwesome6';
 import Cart from './screens/Cart';
+import {Provider} from 'react-redux';
+import {store} from './store/appStore';
 
 export type RootStackParamList = {
   Home: undefined;
@@ -31,33 +33,35 @@ const RestaurantLogo = (cloudinaryImageId: string) => (
 
 export default function App(): React.JSX.Element {
   return (
-    <NavigationContainer>
-      <StatusBar />
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen
-          name="Home"
-          component={Home}
-          options={{
-            title: '',
-            headerLeft: Logo,
-            headerRight: Profile,
-          }}
-        />
-        <Stack.Screen
-          name="RestaurantDetails"
-          component={RestaurantDetails}
-          options={({route}) => ({
-            headerTitle: () => RestaurantLogo(route.params.cloudinaryImageId),
-            headerTitleAlign: 'center',
-          })}
-        />
-        <Stack.Screen
-          name="Cart"
-          component={Cart}
-          options={{presentation: 'modal', headerShown: false}}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+        <StatusBar />
+        <Stack.Navigator initialRouteName="Home">
+          <Stack.Screen
+            name="Home"
+            component={Home}
+            options={{
+              title: '',
+              headerLeft: Logo,
+              headerRight: Profile,
+            }}
+          />
+          <Stack.Screen
+            name="RestaurantDetails"
+            component={RestaurantDetails}
+            options={({route}) => ({
+              headerTitle: () => RestaurantLogo(route.params.cloudinaryImageId),
+              headerTitleAlign: 'center',
+            })}
+          />
+          <Stack.Screen
+            name="Cart"
+            component={Cart}
+            options={{presentation: 'modal', headerShown: false}}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </Provider>
   );
 }
 

@@ -2,9 +2,16 @@ import React, {useState, memo} from 'react';
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {CDN_URL} from '../../utils/constants';
+import {useSelector, useDispatch} from 'react-redux';
+import {RootState} from '../../store/appStore';
+import {addItem} from '../../store/cartSlice';
 
 const MenuListItem = memo(({item, resId}: any) => {
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
+  const cart = useSelector((state: RootState) => state.cart);
+  const dispatch = useDispatch();
+
+  console.log(JSON.stringify(cart, null, 2));
 
   const toggleDescriptionExpansion = () => {
     setIsDescriptionExpanded(!isDescriptionExpanded);
@@ -13,6 +20,15 @@ const MenuListItem = memo(({item, resId}: any) => {
   const descriptionText = item?.card?.info?.description;
   const isTruncated = descriptionText?.length > 100;
   const truncatedDescription = descriptionText?.substring(0, 100) + '...';
+
+  const handleAddItem = (item: any) => {
+    // console.log(resId, JSON.stringify(item, null, 2));
+    if (cart.resId && cart.resId !== resId) {
+      console.log('show modal');
+    } else {
+      dispatch(addItem({resId, item}));
+    }
+  };
 
   return (
     <View className="flex-row rounded-lg h-auto py-4 gap-4">
@@ -71,7 +87,7 @@ const MenuListItem = memo(({item, resId}: any) => {
           <View>
             <TouchableOpacity
               className="-mt-5 flex items-center justify-center mx-auto px-10 py-2 bg-white rounded-md border border-gray-200 border-solid shadow-lg"
-              onPress={() => console.log(resId, item?.card?.info?.name)}>
+              onPress={() => handleAddItem(item)}>
               <Text className="text-green-600 text-lg uppercase font-bold">
                 Add
               </Text>
@@ -82,7 +98,7 @@ const MenuListItem = memo(({item, resId}: any) => {
         <View className="w-40">
           <TouchableOpacity
             className="flex items-center justify-center mx-auto px-10 py-2 bg-white rounded-md border border-gray-200 border-solid shadow-lg"
-            onPress={() => console.log(resId, item?.card?.info?.name)}>
+            onPress={() => handleAddItem(item)}>
             <Text className="text-green-600 text-lg uppercase font-bold">
               Add
             </Text>
