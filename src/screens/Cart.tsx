@@ -10,9 +10,12 @@ import React from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {useNavigation} from '@react-navigation/native';
 import {CDN_URL} from '../utils/constants';
+import {useSelector} from 'react-redux';
+import {RootState} from '../store/appStore';
 
 export default function Cart() {
   const navigation = useNavigation();
+  const cart = useSelector((state: RootState) => state.cart);
   return (
     <SafeAreaView className="flex-1 bg-white">
       <View className="flex-1 bg-gray-100 space-y-4">
@@ -21,7 +24,9 @@ export default function Cart() {
             <Text className="text-lg font-bold text-center text-black">
               Cart
             </Text>
-            <Text className="text-center text-gray-400">Yummies</Text>
+            <Text className="text-center text-gray-400">
+              {cart.restaurantName}
+            </Text>
           </View>
           <TouchableOpacity
             className="rounded-full bg-gray-100 absolute top-3 right-5"

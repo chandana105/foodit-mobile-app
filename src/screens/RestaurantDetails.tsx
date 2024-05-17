@@ -1,5 +1,5 @@
 import {View, Text} from 'react-native';
-import React from 'react';
+import React, {useEffect} from 'react';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '../App';
 import useRestaurantMenu from '../hooks/useRestaurantMenu';
@@ -8,6 +8,8 @@ import RestaurantMenuList from '../components/RestaurantDetailsScreen/Restaurant
 import useRestaurantDetails from '../hooks/useRestaurantDetails';
 import RestaurantDetailsShimmerUI from '../components/RestaurantDetailsScreen/RestaurantDetailsShimmerUI';
 import CartInfoFooter from '../components/RestaurantDetailsScreen/CartInfoFooter';
+import {clearRestaurant, setRestaurant} from '../store/restaurantSlice';
+import {useDispatch} from 'react-redux';
 
 type RestaurantDetailsProps = NativeStackScreenProps<
   RootStackParamList,
@@ -25,9 +27,22 @@ export default function RestaurantDetails({
   const {categoryListRef, activeIndex, setActiveIndexProps} =
     useRestaurantDetails(resInfo, navigation);
 
-  // console.log(JSON.stringify(categoryListRef.current, null, 2));
-  // console.log(JSON.stringify(resInfo, null, 2));
-  // console.log({resId});
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    // Clear the restaurant details when component mounts
+    dispatch(clearRestaurant());
+
+    // Set the new restaurant details
+    if (resInfo) {
+      dispatch(setRestaurant(resInfo));
+    }
+
+    // Cleanup when component unmounts or resId changes
+    return () => {
+      dispatch(clearRestaurant());
+    };
+  }, [resId, resInfo, dispatch]);
 
   return !categoryListRef.current.length ? (
     <RestaurantDetailsShimmerUI />
@@ -40,7 +55,6 @@ export default function RestaurantDetails({
         categoryList={categoryListRef.current}
         activeIndex={activeIndex}
         setActiveIndex={(index: any) => setActiveIndexProps(index)}
-        resId={resId}
       />
       <CartInfoFooter />
     </View>

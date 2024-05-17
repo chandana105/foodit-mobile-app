@@ -7,14 +7,14 @@ const ItemSeperator = () => {
   return <View className="h-[0.5] bg-gray-300" />;
 };
 
-export default function RestaurantMenuListItems({item, resId}: any) {
+export default function RestaurantMenuListItems({item}: any) {
   return (
     <FlatList
       data={item?.card?.card.itemCards}
       keyExtractor={item1 => item1?.card?.info.id}
       className="my-4"
       ItemSeparatorComponent={() => ItemSeperator()}
-      renderItem={({item}) => <MenuListItem item={item} resId={resId} />}
+      renderItem={({item}) => <MenuListItem item={item} />}
     />
   );
 }

@@ -66,19 +66,32 @@ export const cartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
-    addItem: (state, action: PayloadAction<{resId: string; item: any}>) => {
-      const {resId, item} = action.payload;
+    addItem: (
+      state,
+      action: PayloadAction<{resId: string; restaurantName: string; item: any}>,
+    ) => {
+      const {resId, restaurantName, item} = action.payload;
       if (state.resId && state.resId !== resId) {
         // Logic to handle different restaurant items will go here
         // Do not add the item directly if the restaurant ID is different
         return;
       }
       state.resId = resId;
+      state.restaurantName = restaurantName;
+      state.items.push(item);
+    },
+    replaceItems: (
+      state,
+      action: PayloadAction<{resId: string; restaurantName: string; item: any}>,
+    ) => {
+      const {resId, restaurantName, item} = action.payload;
+      state.resId = resId;
+      state.restaurantName = restaurantName;
       state.items.push(item);
     },
   },
 });
 
-export const {addItem} = cartSlice.actions;
+export const {addItem, replaceItems} = cartSlice.actions;
 
 export default cartSlice.reducer;
