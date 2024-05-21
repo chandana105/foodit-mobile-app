@@ -12,7 +12,7 @@ const ItemSeperator = () => {
 
 export default function Cart() {
   const cart = useSelector((state: RootState) => state?.cart);
-
+  console.log(JSON.stringify(cart, null, 2));
   return (
     <SafeAreaView className="flex-1 bg-white">
       <View className="flex-1 bg-gray-100 space-y-4">
@@ -20,7 +20,7 @@ export default function Cart() {
 
         <FlatList
           data={cart?.items}
-          keyExtractor={item => item?.card?.info.id}
+          keyExtractor={item => item?.item?.card?.info.id}
           className="my-4"
           ItemSeparatorComponent={() => ItemSeperator()}
           renderItem={({item}) => <CartItems item={item} />}

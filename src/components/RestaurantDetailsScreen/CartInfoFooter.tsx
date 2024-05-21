@@ -10,16 +10,21 @@ export default function CartInfoFooter() {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   const cart = useSelector((state: RootState) => state.cart);
 
-  if (!cart?.items?.length) {
-    return;
+  // Calculate total quantity of items in the cart
+  const totalQuantity = cart.items.reduce(
+    (acc, item) => acc + item.quantity,
+    0,
+  );
+
+  if (totalQuantity === 0) {
+    return null;
   }
 
   return (
     <View className="absolute bottom-2 left-0 right-0 z-50 px-1 py-6 rounded-lg border border-gray-200 bg-white shadow-lg">
       <View className="rounded-2xl bg-green-600 py-5 px-5 flex-row justify-between ">
         <Text className="text-white font-semibold text-lg">
-          {cart?.items?.length} {cart?.items?.length > 1 ? 'Items' : 'Item'}{' '}
-          added
+          {totalQuantity} {totalQuantity > 1 ? 'Items' : 'Item'} added
         </Text>
         <Pressable
           className="flex-row items-center"

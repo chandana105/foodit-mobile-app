@@ -17,7 +17,7 @@ export default function CartDeleteModal({
   onConfirm,
 }: ModalProps) {
   const cart = useSelector((state: RootState) => state?.cart);
-
+  // console.log(JSON.stringify(cart.items, null, 2));
   return (
     <Modal isVisible={isModalVisible}>
       <View className="flex-1 p-5 mx-auto  my-72  rounded-xl  bg-white">
@@ -54,3 +54,46 @@ export default function CartDeleteModal({
     </Modal>
   );
 }
+
+// {
+//   "item": {
+//     "card": {
+//       "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+//       "info": {
+//         "id": "55557559",
+//         "name": "Crispy Paneer Burger",
+//         "category": "Burgers",
+//         "description": "paneer, cabbage, corn, walnuts, onion, mustard seeds, oregano, ketchup, soya sauce and pepper.",
+//         "imageId": "cgptldabqrqqwku4fq8f",
+//         "inStock": 1,
+//         "isVeg": 1,
+//         "price": 8800,
+//         "variants": {},
+//         "variantsV2": {},
+//         "itemAttribute": {
+//           "vegClassifier": "VEG"
+//         },
+//         "ribbon": {
+//           "text": "Bestseller",
+//           "textColor": "#ffffff",
+//           "topBackgroundColor": "#d53d4c",
+//           "bottomBackgroundColor": "#b02331"
+//         },
+//         "showImage": true,
+//         "itemBadge": {},
+//         "badgesV2": {},
+//         "isBestseller": true,
+//         "ratings": {
+//           "aggregatedRating": {
+//             "rating": "4.3",
+//             "ratingCount": "1284 ratings",
+//             "ratingCountV2": "1284"
+//           }
+//         }
+//       },
+//       "analytics": {},
+//       "hideRestaurantDetails": true
+//     }
+//   },
+//   "quantity": 1
+// }

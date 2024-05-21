@@ -16,10 +16,14 @@ export default function HomeCartDetails({toggleModal}: HomeCartDetailsProps) {
 
   const cart = useSelector((state: RootState) => state?.cart);
 
-  if (!cart?.items?.length) {
-    return;
-  }
+  const totalQuantity = cart.items.reduce(
+    (acc, item) => acc + item.quantity,
+    0,
+  );
 
+  if (totalQuantity === 0) {
+    return null;
+  }
   return (
     <View
       className="absolute bottom-2 left-0 right-0 z-50 px-3 py-5 rounded-xl border border-gray-200 bg-white shadow-lg
@@ -50,8 +54,8 @@ export default function HomeCartDetails({toggleModal}: HomeCartDetailsProps) {
         className="flex-col bg-green-600 py-2 px-4 rounded-lg items-center"
         onPress={() => navigation.navigate('Cart')}>
         <Text className="text-white font-semibold text-base">
-          {cart?.items?.length} {cart?.items?.length > 1 ? 'Items' : 'Item'} |
-          ₹299
+          {totalQuantity} {totalQuantity > 1 ? 'Items' : 'Item'} | ₹
+          {cart?.orderTotal}
         </Text>
         <Text className="text-white font-bold text-lg">Checkout</Text>
       </Pressable>
