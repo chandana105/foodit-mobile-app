@@ -7,8 +7,9 @@ import RestaurantList from '../components/HomeScreen/RestaurantList';
 import RestaurantListShimmerUI from '../components/HomeScreen/RestaurantListShimmerUI';
 import useRestaurantsList from '../hooks/useRestaurantsList';
 import HomeCartDetails from '../components/HomeScreen/HomeCartDetails';
-import CartReplaceModal from '../components/RestaurantDetailsScreen/CartReplaceModal';
 import CartDeleteModal from '../components/HomeScreen/CartDeleteModal';
+import {useDispatch} from 'react-redux';
+import {clearCart} from '../store/cartSlice';
 
 type HomeProps = NativeStackScreenProps<RootStackParamList, 'Home'>;
 
@@ -18,6 +19,8 @@ export default function Home({navigation}: HomeProps) {
       resId: item.info.id,
       cloudinaryImageId: '',
     });
+
+  const dispatch = useDispatch();
 
   const {resList, filteredResList, setFilteredResList} = useRestaurantsList();
   const [isModalVisible, setModalVisible] = useState(false);
@@ -29,6 +32,15 @@ export default function Home({navigation}: HomeProps) {
   const handleFilterTopRatedRestaurants = () => {
     const filteredList = resList.filter(list => list.info.avgRating > 4.4);
     setFilteredResList(filteredList);
+  };
+
+  const handleConfirmReplace = () => {
+    dispatch(clearCart());
+    setModalVisible(false);
+  };
+
+  const handleCancelReplace = () => {
+    setModalVisible(false);
   };
 
   if (!resList.length) {
@@ -53,16 +65,13 @@ export default function Home({navigation}: HomeProps) {
         filteredResList={filteredResList}
         restaurantCardDetails={restaurantCardDetails}
       />
-      {/* here button method will go */}
+
       <HomeCartDetails toggleModal={toggleModal} />
-      {/* herem Modal */}
-      {/* <CartReplaceModal
-        isModalVisible={isModalVisible}
-        toggleModal={toggleModal}
-      /> */}
+
       <CartDeleteModal
         isModalVisible={isModalVisible}
-        toggleModal={toggleModal}
+        onCancel={handleCancelReplace}
+        onConfirm={handleConfirmReplace}
       />
     </View>
   );

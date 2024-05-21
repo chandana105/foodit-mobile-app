@@ -43,16 +43,16 @@
 - On Home Page :- "CartDeleteModal"
 - On any Restaurant's details page while selecting an item from that restaurant when cart is already there, then Show "ReplaceCartModal".
 - View Cart Design
-- CART FUNCTIONALITY :- 
-  - when click on ADD button, to console.log show res id and item name. 
-  - TODO: resId to be not be prop drilled. (to try to use redux toolkit for this)
+- CART FUNCTIONALITY :-
+  - when click on ADD button, to console.log show res id and item name.
     console.log(resId, item?.card?.info?.name)
-    ( LOG  284183 Jammu Poori, Aloo, Chana [2 Pcs]
-      LOG  284183 Chana Bhatura [2 Pcs]
-      LOG  324765 Melts Meal for 1 with Fries - Veg
-      LOG  324765 Melts Meal for 1 with Fries Non-Veg)
-
-  
+    ( LOG 284183 Jammu Poori, Aloo, Chana [2 Pcs])
+  - item added to cart, cart header, cart items and cart footer shown.
+  - All cart Info footer and cart details footer at Home and RestaurantDetails page update with cart Info
+  - All cart Modals update with cart info and functionality
+  **
+  - When item, gets added from Restaurant Details Page, quantity information needs to be added.
+  - Place order details according to quantity of items to be updated.
 
 ## Scereenshots
 

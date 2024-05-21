@@ -1,10 +1,16 @@
 import {createSlice} from '@reduxjs/toolkit';
 
+interface RestaurantState {
+  restaurant: any | null;
+}
+
+const initialState: RestaurantState = {
+  restaurant: null,
+};
+
 const restaurantSlice = createSlice({
   name: 'restaurant',
-  initialState: {
-    restaurant: {},
-  },
+  initialState,
   reducers: {
     setRestaurant: (state, action) => {
       state.restaurant = action.payload;

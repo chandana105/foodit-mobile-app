@@ -4,18 +4,16 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {CDN_URL} from '../../utils/constants';
 import {useSelector, useDispatch} from 'react-redux';
 import {RootState} from '../../store/appStore';
-import {addItem, replaceItems} from '../../store/cartSlice';
+import {addItem, clearCart} from '../../store/cartSlice';
 import CartReplaceModal from './CartReplaceModal';
 
 const MenuListItem = memo(({item}: any) => {
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
   const cart = useSelector((state: RootState) => state.cart);
+
   const restaurant = useSelector(
     (state: RootState) => state?.restaurant?.restaurant,
   );
-
-  const {id: resId, name: restaurantName} =
-    restaurant?.cards[2]?.card?.card?.info;
 
   const [isModalVisible, setModalVisible] = useState(false);
 
@@ -30,15 +28,16 @@ const MenuListItem = memo(({item}: any) => {
   const truncatedDescription = descriptionText?.substring(0, 100) + '...';
 
   const handleAddItem = (item: any) => {
-    if (cart.resId && cart.resId !== resId) {
+    if (cart.resId && cart.resId !== restaurant?.id) {
       setModalVisible(true);
     } else {
-      dispatch(addItem({resId, restaurantName, item}));
+      dispatch(addItem({restaurant, item}));
     }
   };
 
   const handleConfirmReplace = () => {
-    dispatch(replaceItems({resId, restaurantName, item}));
+    dispatch(clearCart());
+    dispatch(addItem({restaurant, item}));
     setModalVisible(false);
   };
 
@@ -127,6 +126,7 @@ const MenuListItem = memo(({item}: any) => {
         isModalVisible={isModalVisible}
         onCancel={handleCancelReplace}
         onConfirm={handleConfirmReplace}
+        replacingRestaurantName={restaurant?.name}
       />
     </>
   );

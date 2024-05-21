@@ -1,64 +1,9 @@
 import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 
-// interface CartInitialState {
-//   resId: string;
-//   cartItems :
-// }
-
-/**
-// cartInfo: {
-//     resId: '324765',
-//     restaurantName: 'Pizza Hut',
-//     items: [
-    {"card": {
-    "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-    "info": {
-      "id": "125166339",
-      "name": "2 Allo Tikki Burger And Spring Rolls And Noodles With Fruit Beer",
-      "category": "Combos",
-      "description": "2 allo tikki burger and spring rolls and noodles with fruit beer",
-      "imageId": "4d70276d68d7059dd0dcc2ed47ab1266",
-      "inStock": 1,
-      "isVeg": 1,
-      "price": 27500,
-      "variants": {},
-      "variantsV2": {},
-      "itemAttribute": {
-        "vegClassifier": "VEG"
-      },
-      "ribbon": {
-        "text": "Bestseller",
-        "textColor": "#ffffff",
-        "topBackgroundColor": "#d53d4c",
-        "bottomBackgroundColor": "#b02331"
-      },
-      "showImage": true,
-      "itemBadge": {},
-      "badgesV2": {},
-      "isBestseller": true,
-      "ratings": {
-        "aggregatedRating": {
-          "rating": "4.3",
-          "ratingCount": "372 ratings",
-          "ratingCountV2": "372"
-        }
-      }
-    },
-    "analytics": {},
-    "hideRestaurantDetails": true
-  }
-}
-
-},
-    {}
-],
-//   },
- */
-
 const initialState: any = {
-  // when added cart for particualr res's will be added
   resId: '',
   restaurantName: '',
+  resImage: '',
   items: [],
 };
 
@@ -66,32 +11,19 @@ export const cartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
-    addItem: (
-      state,
-      action: PayloadAction<{resId: string; restaurantName: string; item: any}>,
-    ) => {
-      const {resId, restaurantName, item} = action.payload;
-      if (state.resId && state.resId !== resId) {
-        // Logic to handle different restaurant items will go here
-        // Do not add the item directly if the restaurant ID is different
-        return;
-      }
-      state.resId = resId;
-      state.restaurantName = restaurantName;
+    addItem: (state, action: PayloadAction<{restaurant: any; item: any}>) => {
+      const {restaurant, item} = action.payload;
+
+      state.resId = restaurant.id;
+      state.restaurantName = restaurant.name;
+      state.resImage = restaurant.cloudinaryImageId;
       state.items.push(item);
     },
-    replaceItems: (
-      state,
-      action: PayloadAction<{resId: string; restaurantName: string; item: any}>,
-    ) => {
-      const {resId, restaurantName, item} = action.payload;
-      state.resId = resId;
-      state.restaurantName = restaurantName;
-      state.items.push(item);
-    },
+
+    clearCart: () => initialState,
   },
 });
 
-export const {addItem, replaceItems} = cartSlice.actions;
+export const {addItem, clearCart} = cartSlice.actions;
 
 export default cartSlice.reducer;

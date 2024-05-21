@@ -35,7 +35,7 @@ export default function RestaurantDetails({
 
     // Set the new restaurant details
     if (resInfo) {
-      dispatch(setRestaurant(resInfo));
+      dispatch(setRestaurant(resInfo.cards[2].card.card.info));
     }
 
     // Cleanup when component unmounts or resId changes
@@ -49,7 +49,6 @@ export default function RestaurantDetails({
   ) : (
     <View className="flex-1">
       <RestaurantDetailsHeader resInfo={resInfo} />
-      {/* Menu */}
       <Text className="text-center text-xl font-semibold text-black">Menu</Text>
       <RestaurantMenuList
         categoryList={categoryListRef.current}

@@ -2,18 +2,24 @@ import {View, Text, TouchableOpacity, Pressable} from 'react-native';
 import React, {PropsWithChildren} from 'react';
 import Modal from 'react-native-modal';
 import Icon from 'react-native-vector-icons/Ionicons';
+import {useSelector} from 'react-redux';
+import {RootState} from '../../store/appStore';
 
 type ModalProps = PropsWithChildren<{
   isModalVisible: boolean;
   onCancel: () => void;
   onConfirm: () => void;
+  replacingRestaurantName: string;
 }>;
 
 export default function CartReplaceModal({
   isModalVisible,
   onCancel,
   onConfirm,
+  replacingRestaurantName,
 }: ModalProps) {
+  const cart = useSelector((state: RootState) => state?.cart);
+
   return (
     <Modal isVisible={isModalVisible}>
       <View className="flex-1 p-5 mx-auto  my-[275]  rounded-xl  bg-white">
@@ -27,8 +33,9 @@ export default function CartReplaceModal({
             Replace cart item?
           </Text>
           <Text className="text-gray-600 text-lg leading-6">
-            Your cart contains dishes from Burger King. Do you want to discard
-            the selection and add dishes from Jass Bakers?
+            Your cart contains dishes from {cart?.restaurantName}. Do you want
+            to discard the selection and add dishes from{' '}
+            {replacingRestaurantName}?
           </Text>
         </View>
         {/* Modal footer */}
