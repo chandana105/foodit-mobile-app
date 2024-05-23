@@ -22,7 +22,9 @@ export default function CartFooter() {
 
       <View className="flex-row justify-between">
         <Text className="text-black">Order Total</Text>
-        <Text className="text-black font-extrabold">₹{cart.orderTotal}</Text>
+        <Text className="text-black font-extrabold">
+          ₹{cart.orderTotal.toFixed(2)}
+        </Text>
       </View>
 
       <TouchableOpacity className="rounded-lg bg-green-600 p-4">

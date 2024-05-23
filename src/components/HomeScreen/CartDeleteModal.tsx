@@ -17,32 +17,31 @@ export default function CartDeleteModal({
   onConfirm,
 }: ModalProps) {
   const cart = useSelector((state: RootState) => state?.cart);
-  // console.log(JSON.stringify(cart.items, null, 2));
+
   return (
     <Modal isVisible={isModalVisible}>
-      <View className="flex-1 p-5 mx-auto  my-72  rounded-xl  bg-white">
-        {/* Modal header */}
-        <Pressable className="self-end " onPress={onCancel}>
-          <Icon name="close-circle" size={32} color="#B5B7BA" />
-        </Pressable>
-        {/* Modal body */}
-        <View className="gap-1 -mt-3">
-          <Text className="text-black font-bold text-xl">Clear cart?</Text>
-          <Text className="text-gray-600 text-lg leading-6">
-            Are you sure you want to clear your cart from {cart?.restaurantName}
-            ?
-          </Text>
-        </View>
-        {/* Modal footer */}
-        <View className="my-12 flex-row items-center justify-between">
-          <View>
+      <View className="flex-1 justify-center items-center">
+        <View className="p-5 mx-4 my-4 rounded-xl bg-white w-80">
+          {/* Modal header */}
+          <Pressable className="self-end" onPress={onCancel}>
+            <Icon name="close-circle" size={32} color="#B5B7BA" />
+          </Pressable>
+          {/* Modal body */}
+          <View className="gap-1 -mt-3 mb-8">
+            {/* Adjusted margin */}
+            <Text className="text-black font-bold text-xl">Clear cart?</Text>
+            <Text className="text-gray-600 text-lg leading-6">
+              Are you sure you want to clear your cart from {''}
+              {cart?.restaurantName}?
+            </Text>
+          </View>
+          {/* Modal footer */}
+          <View className=" flex-row items-center justify-around">
             <TouchableOpacity
               className="flex items-center justify-center mx-auto px-[52] py-2 bg-red-50  rounded-lg  border-solid shadow-sm"
               onPress={onCancel}>
               <Text className="text-orange-600 text-lg  font-bold">No</Text>
             </TouchableOpacity>
-          </View>
-          <View>
             <TouchableOpacity
               className=" flex items-center justify-center mx-auto px-[52] py-2 bg-orange-600 rounded-lg  border-solid shadow-sm"
               onPress={onConfirm}>
@@ -54,46 +53,3 @@ export default function CartDeleteModal({
     </Modal>
   );
 }
-
-// {
-//   "item": {
-//     "card": {
-//       "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-//       "info": {
-//         "id": "55557559",
-//         "name": "Crispy Paneer Burger",
-//         "category": "Burgers",
-//         "description": "paneer, cabbage, corn, walnuts, onion, mustard seeds, oregano, ketchup, soya sauce and pepper.",
-//         "imageId": "cgptldabqrqqwku4fq8f",
-//         "inStock": 1,
-//         "isVeg": 1,
-//         "price": 8800,
-//         "variants": {},
-//         "variantsV2": {},
-//         "itemAttribute": {
-//           "vegClassifier": "VEG"
-//         },
-//         "ribbon": {
-//           "text": "Bestseller",
-//           "textColor": "#ffffff",
-//           "topBackgroundColor": "#d53d4c",
-//           "bottomBackgroundColor": "#b02331"
-//         },
-//         "showImage": true,
-//         "itemBadge": {},
-//         "badgesV2": {},
-//         "isBestseller": true,
-//         "ratings": {
-//           "aggregatedRating": {
-//             "rating": "4.3",
-//             "ratingCount": "1284 ratings",
-//             "ratingCountV2": "1284"
-//           }
-//         }
-//       },
-//       "analytics": {},
-//       "hideRestaurantDetails": true
-//     }
-//   },
-//   "quantity": 1
-// }

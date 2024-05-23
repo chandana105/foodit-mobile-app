@@ -1,66 +1,50 @@
-import React, {useState, memo} from 'react';
+import React, {memo} from 'react';
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {CDN_URL} from '../../utils/constants';
-import {useSelector, useDispatch} from 'react-redux';
+import {useSelector} from 'react-redux';
 import {RootState} from '../../store/appStore';
-import {
-  addItem,
-  clearCart,
-  incrementQuantity,
-  decrementQuantity,
-} from '../../store/cartSlice';
 import CartReplaceModal from './CartReplaceModal';
+import useMenuListItem from '../../hooks/useMenuListItem';
+
+const QuantityComponent = ({
+  handleDecrement,
+  handleIncrement,
+  quantity,
+}: any) => {
+  return (
+    <>
+      <TouchableOpacity className="px-4" onPress={handleDecrement}>
+        <Text className="text-green-600 text-lg uppercase font-bold">-</Text>
+      </TouchableOpacity>
+      <Text className="text-green-600 text-lg uppercase font-bold">
+        {quantity}
+      </Text>
+      <TouchableOpacity className="px-4" onPress={handleIncrement}>
+        <Text className="text-green-600 text-lg uppercase font-bold">+</Text>
+      </TouchableOpacity>
+    </>
+  );
+};
 
 const MenuListItem = memo(({item}: any) => {
-  const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
-  const cart = useSelector((state: RootState) => state.cart);
+  const {
+    isTruncated,
+    isDescriptionExpanded,
+    descriptionText,
+    truncatedDescription,
+    quantity,
+    isModalVisible,
+    handleAddItem,
+    handleCancelReplace,
+    handleConfirmReplace,
+    handleDecrement,
+    handleIncrement,
+    toggleDescriptionExpansion,
+  } = useMenuListItem(item);
   const restaurant = useSelector(
     (state: RootState) => state?.restaurant?.restaurant,
   );
-  const [isModalVisible, setModalVisible] = useState(false);
-  const dispatch = useDispatch();
-
-  // Get the quantity from the cart
-  const cartItem = cart.items.find(
-    cartItem => cartItem.item.card.info.id === item.card.info.id,
-  );
-  const quantity = cartItem ? cartItem.quantity : 0;
-
-  const toggleDescriptionExpansion = () => {
-    setIsDescriptionExpanded(!isDescriptionExpanded);
-  };
-
-  const descriptionText = item?.card?.info?.description;
-  const isTruncated = descriptionText?.length > 100;
-  const truncatedDescription = descriptionText?.substring(0, 100) + '...';
-
-  const handleAddItem = () => {
-    if (cart.resId && cart.resId !== restaurant?.id) {
-      setModalVisible(true);
-    } else {
-      dispatch(addItem({restaurant, item}));
-    }
-  };
-
-  const handleConfirmReplace = () => {
-    dispatch(clearCart());
-    dispatch(addItem({restaurant, item}));
-    setModalVisible(false);
-  };
-
-  const handleCancelReplace = () => {
-    setModalVisible(false);
-  };
-
-  const handleIncrement = () => {
-    dispatch(incrementQuantity(item.card.info.id));
-  };
-
-  const handleDecrement = () => {
-    dispatch(decrementQuantity(item.card.info.id));
-  };
-
   return (
     <>
       <View className="flex-row rounded-lg h-auto py-4 gap-4">
@@ -117,20 +101,14 @@ const MenuListItem = memo(({item}: any) => {
               className="w-40 h-32 rounded-lg"
             />
             {quantity > 0 ? (
-              <View className="-mt-5 flex-row items-center justify-between py-2 bg-white rounded-md border border-gray-200 border-solid">
-                <TouchableOpacity className="px-4" onPress={handleDecrement}>
-                  <Text className="text-green-600 text-lg uppercase font-bold">
-                    -
-                  </Text>
-                </TouchableOpacity>
-                <Text className="text-green-600 text-lg uppercase font-bold">
-                  {quantity}
-                </Text>
-                <TouchableOpacity className="px-4" onPress={handleIncrement}>
-                  <Text className="text-green-600 text-lg uppercase font-bold">
-                    +
-                  </Text>
-                </TouchableOpacity>
+              <View className="mx-auto bg-white shadow-lg w-[120]">
+                <View className="-mt-5 flex-row items-center justify-between py-2  bg-white rounded-md border border-gray-200 border-solid   ">
+                  <QuantityComponent
+                    handleDecrement={handleDecrement}
+                    handleIncrement={handleIncrement}
+                    quantity={quantity}
+                  />
+                </View>
               </View>
             ) : (
               <View>
@@ -147,20 +125,14 @@ const MenuListItem = memo(({item}: any) => {
         ) : (
           <View className="w-40">
             {quantity > 0 ? (
-              <View className="-mt-5 flex-row items-center justify-between py-2 bg-white rounded-md border border-gray-200 border-solid">
-                <TouchableOpacity className="px-4" onPress={handleDecrement}>
-                  <Text className="text-green-600 text-lg uppercase font-bold">
-                    -
-                  </Text>
-                </TouchableOpacity>
-                <Text className="text-green-600 text-lg uppercase font-bold">
-                  {quantity}
-                </Text>
-                <TouchableOpacity className="px-4" onPress={handleIncrement}>
-                  <Text className="text-green-600 text-lg uppercase font-bold">
-                    +
-                  </Text>
-                </TouchableOpacity>
+              <View className="mx-auto bg-white  shadow-lg w-[120]">
+                <View className="flex-row items-center justify-between py-2  bg-white rounded-md border border-gray-200 border-solid   ">
+                  <QuantityComponent
+                    handleDecrement={handleDecrement}
+                    handleIncrement={handleIncrement}
+                    quantity={quantity}
+                  />
+                </View>
               </View>
             ) : (
               <TouchableOpacity

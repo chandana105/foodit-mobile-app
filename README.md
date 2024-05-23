@@ -50,9 +50,10 @@
   - item added to cart, cart header, cart items and cart footer shown.
   - All cart Info footer and cart details footer at Home and RestaurantDetails page update with cart Info
   - All cart Modals update with cart info and functionality
-  **
   - When item, gets added from Restaurant Details Page, quantity information needs to be added.
   - Place order details according to quantity of items to be updated.
+  - Refactoring the code
+  - Cart Shimmer UI
 
 ## Scereenshots
 

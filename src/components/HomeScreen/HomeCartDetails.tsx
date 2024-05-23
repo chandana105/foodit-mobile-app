@@ -24,18 +24,19 @@ export default function HomeCartDetails({toggleModal}: HomeCartDetailsProps) {
   if (totalQuantity === 0) {
     return null;
   }
+
   return (
-    <View
-      className="absolute bottom-2 left-0 right-0 z-50 px-3 py-5 rounded-xl border border-gray-200 bg-white shadow-lg
-    flex-row justify-between items-center ">
+    <View className="absolute bottom-2 left-0 right-0 z-50 px-3 py-5 rounded-xl border border-gray-200 bg-white shadow-lg flex-row justify-between items-center space-x-2">
       <Image
         source={{
           uri: `${CDN_URL}${cart?.resImage}`,
         }}
-        className="w-12 h-12 rounded-full items-center "
+        className="w-12 h-12 rounded-full"
       />
-      <View className="flex-col items-center">
-        <Text className="text-black font-semibold text-lg">
+      <View className="flex-1 mx-3  ">
+        <Text
+          className="text-black font-semibold text-base truncate"
+          numberOfLines={1}>
           {cart?.restaurantName}
         </Text>
         <Pressable
@@ -45,9 +46,7 @@ export default function HomeCartDetails({toggleModal}: HomeCartDetailsProps) {
               cloudinaryImageId: '',
             })
           }>
-          <Text className="underline text-gray-700" numberOfLines={1}>
-            View Full Menu
-          </Text>
+          <Text className="underline text-gray-700 ">View Full Menu</Text>
         </Pressable>
       </View>
       <Pressable
@@ -57,7 +56,7 @@ export default function HomeCartDetails({toggleModal}: HomeCartDetailsProps) {
           {totalQuantity} {totalQuantity > 1 ? 'Items' : 'Item'} | ₹
           {cart?.orderTotal}
         </Text>
-        <Text className="text-white font-bold text-lg">Checkout</Text>
+        <Text className="text-white font-bold text-base">Checkout</Text>
       </Pressable>
       <Pressable
         className="bg-red-100 h-full p-2 rounded-lg flex items-center justify-center"

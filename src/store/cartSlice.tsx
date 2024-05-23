@@ -76,7 +76,11 @@ export const cartSlice = createSlice({
           );
         }
       }
-      state.orderTotal = calculateOrderTotal(state.items);
+      if (state.items.length === 0) {
+        Object.assign(state, initialState);
+      } else {
+        state.orderTotal = calculateOrderTotal(state.items);
+      }
     },
 
     clearCart: () => initialState,
@@ -87,3 +91,17 @@ export const {addItem, clearCart, incrementQuantity, decrementQuantity} =
   cartSlice.actions;
 
 export default cartSlice.reducer;
+
+/**
+ *  LOG  {
+  "resId": "863240",
+  "restaurantName": "Zaika Chicken Biryani Corner",
+  "resImage": "RX_THUMBNAIL/IMAGES/VENDOR/2024/3/29/0bb8cd7b-f6d8-46b6-8200-eb92beccfe24_863240.jpg",
+  "items": [],
+  "orderTotal": 20
+}
+if in decrease quantity :- last item remaining then :- cart empty dont show
+and startign mein order total shold be 0, ?
+
+modal desiginig gettign sidtorted TODO:
+ */
