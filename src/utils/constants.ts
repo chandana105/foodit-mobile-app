@@ -12,5 +12,3 @@ export const MENU_API_START_URL =
 
 export const MENU_API_END_URL =
   '&catalog_qa=undefined&isMenuUx4=true&submitAction=ENTER';
-
-// https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=31.33103899100404&lng=75.57223644107582&restaurantId=283662&catalog_qa=undefined&isMenuUx4=true&submitAction=ENTER

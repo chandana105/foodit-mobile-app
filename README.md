@@ -3,6 +3,7 @@
 - navigation (stack)
 - home page of all food items list
 - TODO: FONT THEME NOT PUT TILL NOW , TO ADD IT
+- TODO: Remove user icon on home header
 
 ### home page :-
 
@@ -17,8 +18,8 @@
 - HOC VEG restaurant
 - cuisines display in slice
 - if no filtered / resList length is 0 in starting or on fitlers :- display No Restaurants Text.
-- TODO: if no restaurants on top rated filter , then user should be able to remove that filter again
 - TODO: onRefresh of Flatlist (to fetch new list of restaurants if user wants)
+- TODO: To show infinte number of rest's not only 10 (ie only of page1)
 
 ### restaurant Details page :-
 
@@ -52,8 +53,9 @@
   - All cart Modals update with cart info and functionality
   - When item, gets added from Restaurant Details Page, quantity information needs to be added.
   - Place order details according to quantity of items to be updated.
+    \*\*
   - Refactoring the code
-  - Cart Shimmer UI
+  - updating screen recording , pics of app again
 
 ## Scereenshots
 

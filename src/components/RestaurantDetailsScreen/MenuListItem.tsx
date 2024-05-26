@@ -6,26 +6,7 @@ import {useSelector} from 'react-redux';
 import {RootState} from '../../store/appStore';
 import CartReplaceModal from './CartReplaceModal';
 import useMenuListItem from '../../hooks/useMenuListItem';
-
-const QuantityComponent = ({
-  handleDecrement,
-  handleIncrement,
-  quantity,
-}: any) => {
-  return (
-    <>
-      <TouchableOpacity className="px-4" onPress={handleDecrement}>
-        <Text className="text-green-600 text-lg uppercase font-bold">-</Text>
-      </TouchableOpacity>
-      <Text className="text-green-600 text-lg uppercase font-bold">
-        {quantity}
-      </Text>
-      <TouchableOpacity className="px-4" onPress={handleIncrement}>
-        <Text className="text-green-600 text-lg uppercase font-bold">+</Text>
-      </TouchableOpacity>
-    </>
-  );
-};
+import QuantityComponent from './QuantityComponent';
 
 const MenuListItem = memo(({item}: any) => {
   const {

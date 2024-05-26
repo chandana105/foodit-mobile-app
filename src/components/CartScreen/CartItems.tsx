@@ -3,6 +3,7 @@ import React from 'react';
 import {useDispatch} from 'react-redux';
 import {CDN_URL} from '../../utils/constants';
 import {incrementQuantity, decrementQuantity} from '../../store/cartSlice';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 export default function CartItems({item}: any) {
   const dispatch = useDispatch();
@@ -20,12 +21,19 @@ export default function CartItems({item}: any) {
 
   return (
     <View className="flex-row items-center bg-white py-3 px-5 space-x-2">
-      <Image
-        source={{
-          uri: `${CDN_URL}${info?.imageId}`,
-        }}
-        className="w-10 h-10 rounded-full "
-      />
+      {info?.imageId ? (
+        <Image
+          source={{
+            uri: `${CDN_URL}${info?.imageId}`,
+          }}
+          className="w-10 h-10 rounded-full "
+        />
+      ) : (
+        <View className="border border-gray-300 rounded-full w-10 h-10 items-center justify-center">
+          <Icon name="hide-image" size={25} color="#040" />
+        </View>
+      )}
+
       <Text
         className="flex-1 text-gray-700 text-base mx-3  truncate"
         style={styles.itemName}>

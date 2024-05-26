@@ -10,7 +10,6 @@ export default function CartInfoFooter() {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   const cart = useSelector((state: RootState) => state.cart);
 
-  // Calculate total quantity of items in the cart
   const totalQuantity = cart.items.reduce(
     (acc, item) => acc + item.quantity,
     0,

@@ -27,25 +27,27 @@ export default function CartDeleteModal({
             <Icon name="close-circle" size={32} color="#B5B7BA" />
           </Pressable>
           {/* Modal body */}
-          <View className="gap-1 -mt-3 mb-8">
-            {/* Adjusted margin */}
+          <View className="gap-1 -mt-3 mb-4">
             <Text className="text-black font-bold text-xl">Clear cart?</Text>
             <Text className="text-gray-600 text-lg leading-6">
-              Are you sure you want to clear your cart from {''}
+              Are you sure you want to clear your cart from{' '}
               {cart?.restaurantName}?
             </Text>
           </View>
+          {/* Spacer to push the footer to the bottom */}
+          <View className="flex-grow" />
+
           {/* Modal footer */}
-          <View className=" flex-row items-center justify-around">
+          <View className="flex-row items-center justify-around gap-4 mt-1">
             <TouchableOpacity
-              className="flex items-center justify-center mx-auto px-[52] py-2 bg-red-50  rounded-lg  border-solid shadow-sm"
+              className="flex items-center justify-center mx-auto px-[52] py-2 bg-red-50 rounded-lg border-solid shadow-sm"
               onPress={onCancel}>
-              <Text className="text-orange-600 text-lg  font-bold">No</Text>
+              <Text className="text-orange-600 text-lg font-bold">No</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              className=" flex items-center justify-center mx-auto px-[52] py-2 bg-orange-600 rounded-lg  border-solid shadow-sm"
+              className="flex items-center justify-center mx-auto px-[52] py-2 bg-orange-600 rounded-lg border-solid shadow-sm"
               onPress={onConfirm}>
-              <Text className="text-white text-lg  font-bold">Yes</Text>
+              <Text className="text-white text-lg font-bold">Yes</Text>
             </TouchableOpacity>
           </View>
         </View>

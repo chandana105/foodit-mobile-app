@@ -3,28 +3,15 @@ import React, {PropsWithChildren, useState} from 'react';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 type SearchBarProps = PropsWithChildren<{
-  resList: RestaurantItem[];
-  filteredResList: RestaurantItem[];
-  setFilteredResList: (filteredResList: RestaurantItem[]) => void;
+  handleFilter: (text: string) => void;
 }>;
 
-export default function SearchBar({
-  resList,
-  setFilteredResList,
-}: SearchBarProps) {
+export default function SearchBar({handleFilter}: SearchBarProps) {
   const [userInput, setUserInput] = useState('');
-
-  const handleFilter = (text: string) => {
-    if (text) {
-      const filteredRestaurants = resList.filter(res =>
-        res.info.name.toLowerCase().includes(text.toLowerCase()),
-      );
-      setFilteredResList(filteredRestaurants);
-    } else {
-      setFilteredResList(resList);
-    }
+  const clearInput = () => {
+    setUserInput('');
+    handleFilter('');
   };
-
   return (
     <View className=" rounded-lg  m-4 flex flex-row items-center bg-slate-300 pr-2">
       <TextInput
@@ -36,11 +23,16 @@ export default function SearchBar({
           handleFilter(text);
         }}
         value={userInput}
-        clearButtonMode="always"
       />
-      <Pressable>
-        <Icon name="search" size={25} color="#777" className="" />
-      </Pressable>
+      {userInput ? (
+        <Pressable onPress={clearInput}>
+          <Icon name="close" size={25} color="#777" className="mr-2" />
+        </Pressable>
+      ) : (
+        <Pressable>
+          <Icon name="search" size={25} color="#777" className="" />
+        </Pressable>
+      )}
     </View>
   );
 }

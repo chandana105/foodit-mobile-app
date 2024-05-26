@@ -10,26 +10,27 @@ import {
 
 const useMenuListItem = (item: any) => {
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
+  const [isModalVisible, setModalVisible] = useState(false);
+
+  const dispatch = useDispatch();
+
   const cart = useSelector((state: RootState) => state.cart);
   const restaurant = useSelector(
     (state: RootState) => state?.restaurant?.restaurant,
   );
-  const [isModalVisible, setModalVisible] = useState(false);
-  const dispatch = useDispatch();
 
-  // Get the quantity from the cart
   const cartItem = cart.items.find(
     itemInCart => itemInCart.item.card.info.id === item.card.info.id,
   );
   const quantity = cartItem ? cartItem.quantity : 0;
 
-  const toggleDescriptionExpansion = () => {
-    setIsDescriptionExpanded(!isDescriptionExpanded);
-  };
-
   const descriptionText = item?.card?.info?.description;
   const isTruncated = descriptionText?.length > 100;
   const truncatedDescription = descriptionText?.substring(0, 100) + '...';
+
+  const toggleDescriptionExpansion = () => {
+    setIsDescriptionExpanded(!isDescriptionExpanded);
+  };
 
   const handleAddItem = () => {
     if (cart.resId && cart.resId !== restaurant?.id) {
