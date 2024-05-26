@@ -23,6 +23,7 @@ export default function RestaurantList({
           <Text className="text-2xl text-black">No Restaurants</Text>
         </View>
       }
+      ListFooterComponent={<View className="h-28" />}
       renderItem={({item}) => (
         <Pressable
           onPress={() => restaurantCardDetails(item)}
@@ -34,7 +35,6 @@ export default function RestaurantList({
           )}
         </Pressable>
       )}
-      // onRefresh={() => filteredResList}
     />
   );
 }
