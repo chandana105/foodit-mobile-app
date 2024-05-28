@@ -50,8 +50,10 @@
   - When item, gets added from Restaurant Details Page, quantity information needs to be added.
   - Place order details according to quantity of items to be updated.
   - Refactoring the code
-  - updating screen recording , pics of app again
-  - creating APK
+  -TODO:creating APK
+  - TODO:updating screen recording (after creating apk)
+  - TODO: then push to main
+   
 
 ## Screenshots
 
