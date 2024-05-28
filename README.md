@@ -1,12 +1,10 @@
-# todo
+# Features
 
 - navigation (stack)
-- home page of all food items list
-- TODO: FONT THEME NOT PUT TILL NOW , TO ADD IT
-- TODO: Remove user icon on home header
 
 ### home page :-
 
+- home page of all food items list
 - header ( title and left and right btn )
 - search bar designing
 - top rated filter button designing
@@ -18,8 +16,6 @@
 - HOC VEG restaurant
 - cuisines display in slice
 - if no filtered / resList length is 0 in starting or on fitlers :- display No Restaurants Text.
-- TODO: onRefresh of Flatlist (to fetch new list of restaurants if user wants)
-- TODO: To show infinte number of rest's not only 10 (ie only of page1)
 
 ### restaurant Details page :-
 
@@ -53,16 +49,26 @@
   - All cart Modals update with cart info and functionality
   - When item, gets added from Restaurant Details Page, quantity information needs to be added.
   - Place order details according to quantity of items to be updated.
-    \*\*
   - Refactoring the code
   - updating screen recording , pics of app again
+  - creating APK
 
-## Scereenshots
+## Screenshots
 
 ![Alt text](src/assets/1.png)
 ![Alt text](src/assets/2.png)
 ![Alt text](src/assets/3.png)
+![Alt text](src/assets/4.png)
+![Alt text](src/assets/5.png)
+![Alt text](src/assets/6.png)
+![Alt text](src/assets/7.png)
 
 ## Video recording till Restaurant Menu List Page
 
 https://github.com/chandana105/food-ordering-mobile-app/assets/39641650/04200459-fbb1-4729-8259-410e8afd1efa
+
+
+
+- TODO: FONT THEME NOT PUT TILL NOW , TO ADD IT
+- TODO: onRefresh of Flatlist (to fetch new list of restaurants if user wants) (HOME PAGE)
+- TODO: To show infinte number of rest's not only 10 (ie only of page1) (HOME PAGE)
