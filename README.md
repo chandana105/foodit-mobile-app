@@ -57,7 +57,7 @@
 
 ## Screenshots
 
-<img src="src/assets/1.png" alt="drawing" width="200"/>  ----|---  <img src="src/assets/2.png" alt="drawing" width="200"/> ----|---- <img src="src/assets/3.png" alt="drawing" width="200"/> ----|---- <img src="src/assets/4.png" alt="drawing" width="200"/> ----|----  <img src="src/assets/5.png" alt="drawing" width="200"/> ----|---- <img src="src/assets/6.png" alt="drawing" width="200"/> ----|---- <img src="src/assets/7.png" alt="drawing" width="200"/>
+<img src="src/assets/1.png" alt="drawing" width="200"/>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <img src="src/assets/2.png" alt="drawing" width="200"/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="src/assets/3.png" alt="drawing" width="200"/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="src/assets/4.png" alt="drawing" width="200"/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />  <img src="src/assets/5.png" alt="drawing" width="200"/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="src/assets/6.png" alt="drawing" width="200"/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="src/assets/7.png" alt="drawing" width="200"/>
 
 ## Video recording till Restaurant Menu List Page
 
