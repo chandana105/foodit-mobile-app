@@ -26,6 +26,12 @@ const MenuListItem = memo(({item}: any) => {
   const restaurant = useSelector(
     (state: RootState) => state?.restaurant?.restaurant,
   );
+
+  // Format price function
+  const formatPrice = (price: number) => {
+    return (price / 100).toFixed(2);
+  };
+
   return (
     <>
       <View className="flex-row rounded-lg h-auto py-4 gap-4">
@@ -37,8 +43,8 @@ const MenuListItem = memo(({item}: any) => {
           <Text className="font-bold text-black text-base">
             ₹
             {item.card.info.price
-              ? item.card.info.price / 100
-              : item.card.info.defaultPrice / 100}
+              ? formatPrice(item.card.info.price)
+              : formatPrice(item.card.info.defaultPrice)}
           </Text>
 
           {item.card.info.ratings.aggregatedRating?.rating && (
@@ -83,7 +89,7 @@ const MenuListItem = memo(({item}: any) => {
             />
             {quantity > 0 ? (
               <View className="mx-auto bg-white shadow-lg w-[120]">
-                <View className="-mt-5 flex-row items-center justify-between py-2  bg-white rounded-md border border-gray-200 border-solid   ">
+                <View className="-mt-5 flex-row items-center justify-between py-2 bg-white rounded-md border border-gray-200 border-solid">
                   <QuantityComponent
                     handleDecrement={handleDecrement}
                     handleIncrement={handleIncrement}
@@ -106,8 +112,8 @@ const MenuListItem = memo(({item}: any) => {
         ) : (
           <View className="w-40">
             {quantity > 0 ? (
-              <View className="mx-auto bg-white  shadow-lg w-[120]">
-                <View className="flex-row items-center justify-between py-2  bg-white rounded-md border border-gray-200 border-solid   ">
+              <View className="mx-auto bg-white shadow-lg w-[120]">
+                <View className="flex-row items-center justify-between py-2 bg-white rounded-md border border-gray-200 border-solid">
                   <QuantityComponent
                     handleDecrement={handleDecrement}
                     handleIncrement={handleIncrement}

@@ -55,19 +55,17 @@
 
 ## Screenshots
 
-![Alt text](src/assets/1.png)
-![Alt text](src/assets/2.png)
-![Alt text](src/assets/3.png)
-![Alt text](src/assets/4.png)
-![Alt text](src/assets/5.png)
-![Alt text](src/assets/6.png)
-![Alt text](src/assets/7.png)
+<img src="src/assets/1.png" alt="drawing" width="150"/>
+<img src="src/assets/2.png" alt="drawing" width="150"/>
+<img src="src/assets/3.png" alt="drawing" width="150"/>
+<img src="src/assets/4.png" alt="drawing" width="150"/>
+<img src="src/assets/5.png" alt="drawing" width="150"/>
+<img src="src/assets/6.png" alt="drawing" width="150"/>
+<img src="src/assets/7.png" alt="drawing" width="150"/>
 
 ## Video recording till Restaurant Menu List Page
 
 https://github.com/chandana105/food-ordering-mobile-app/assets/39641650/04200459-fbb1-4729-8259-410e8afd1efa
-
-
 
 - TODO: FONT THEME NOT PUT TILL NOW , TO ADD IT
 - TODO: onRefresh of Flatlist (to fetch new list of restaurants if user wants) (HOME PAGE)

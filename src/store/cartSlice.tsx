@@ -27,7 +27,8 @@ const calculateOrderTotal = (items: CartItem[]) => {
     return acc + (price * item.quantity) / 100;
   }, 0);
   const deliveryFee = 20;
-  return subtotal + deliveryFee;
+  const total = subtotal + deliveryFee;
+  return parseFloat(total.toFixed(2));
 };
 
 export const cartSlice = createSlice({

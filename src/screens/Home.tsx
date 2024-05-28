@@ -46,9 +46,7 @@ export default function Home({navigation}: HomeProps) {
           Top Rated Restaurants
         </Text>
         {isFilterOn && (
-          <TouchableOpacity
-            className=" bg-white ml-3"
-            onPress={handleCloseFilter}>
+          <TouchableOpacity className="  ml-3" onPress={handleCloseFilter}>
             <Icon name="close-circle" size={20} color="#111" />
           </TouchableOpacity>
         )}

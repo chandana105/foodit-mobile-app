@@ -19,6 +19,10 @@ export default function CartItems({item}: any) {
     dispatch(decrementQuantity(info.id));
   };
 
+  const formatPrice = (price: number) => {
+    return (Math.round(price * 100) / 100).toFixed(2);
+  };
+
   return (
     <View className="flex-row items-center bg-white py-3 px-5 space-x-2">
       {info?.imageId ? (
@@ -35,12 +39,12 @@ export default function CartItems({item}: any) {
       )}
 
       <Text
-        className="flex-1 text-gray-700 text-base mx-3  truncate"
+        className="flex-1 text-gray-700 text-base mx-3 truncate"
         style={styles.itemName}>
         {info?.name}
       </Text>
       <View
-        className=" flex-row items-center justify-between py-2 bg-white rounded-md border border-gray-200 "
+        className="flex-row items-center justify-between py-2 bg-white rounded-md border border-gray-200"
         style={styles.buttonBox}>
         <TouchableOpacity className="px-4" onPress={handleDecrement}>
           <Text className="text-green-600 text-lg uppercase font-bold">-</Text>
@@ -55,7 +59,7 @@ export default function CartItems({item}: any) {
       <Text
         className="text-black text-base font-semibold ml-3"
         style={styles.priceView}>
-        ₹{((info?.price || info?.defaultPrice) / 100) * quantity}
+        ₹{formatPrice(((info?.price || info?.defaultPrice) / 100) * quantity)}
       </Text>
     </View>
   );
@@ -69,7 +73,7 @@ const styles = StyleSheet.create({
     width: 100,
   },
   priceView: {
-    width: 60,
+    width: 80,
     textAlign: 'right',
   },
 });
