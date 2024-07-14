@@ -20,16 +20,9 @@ export default function CartFooter() {
         <Text className="text-gray-400">₹20.00</Text>
       </View>
 
-      <View className="flex-row justify-between">
-        <Text className="text-black">Order Total</Text>
-        <Text className="text-black font-extrabold">
-          ₹{cart.orderTotal.toFixed(2)}
-        </Text>
-      </View>
-
       <TouchableOpacity className="rounded-lg bg-green-600 p-4">
         <Text className="text-center text-white text-lg font-bold">
-          Place Order
+          Order Total : ₹{cart.orderTotal.toFixed(2)}
         </Text>
       </TouchableOpacity>
     </View>

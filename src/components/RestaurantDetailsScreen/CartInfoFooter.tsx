@@ -5,15 +5,13 @@ import {useNavigation, NavigationProp} from '@react-navigation/native';
 import {useSelector} from 'react-redux';
 import {RootState} from '../../store/appStore';
 import {RootStackParamList} from '../../App';
+import {calculateTotalQuantity} from '../../utils/helper';
 
 export default function CartInfoFooter() {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   const cart = useSelector((state: RootState) => state.cart);
 
-  const totalQuantity = cart.items.reduce(
-    (acc, item) => acc + item.quantity,
-    0,
-  );
+  const totalQuantity = calculateTotalQuantity(cart.items);
 
   if (totalQuantity === 0) {
     return null;

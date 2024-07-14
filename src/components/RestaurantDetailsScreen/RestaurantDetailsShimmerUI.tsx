@@ -2,11 +2,9 @@ import {FlatList, StyleSheet, View} from 'react-native';
 import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 import {createShimmerPlaceholder} from 'react-native-shimmer-placeholder';
+import {cardButtonShimmerColors, shimmerColors} from '../../utils/constants';
 
 const ShimmerPlaceHolder = createShimmerPlaceholder(LinearGradient);
-
-const shimmerColors = ['#e2e8f0', '#cbd5e1', '#cbd5e9'];
-const shimmerColors1 = ['#e2e8f0', '#cbd5e1', '#ccd5e9'];
 
 export default function RestaurantDetailsShimmerUI() {
   return (
@@ -52,7 +50,7 @@ export default function RestaurantDetailsShimmerUI() {
                   style={styles.cardImageContainer}
                 />
                 <ShimmerPlaceHolder
-                  shimmerColors={shimmerColors1}
+                  shimmerColors={cardButtonShimmerColors}
                   style={styles.cardButton}
                 />
               </View>

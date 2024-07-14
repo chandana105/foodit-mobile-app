@@ -24,36 +24,35 @@ export default function RestaurantDetails({
 
   const resInfo = useRestaurantMenu(resId);
 
-  const {categoryListRef, activeIndex, setActiveIndexProps} =
-    useRestaurantDetails(resInfo, navigation);
+  const {openCategories, categories, handleToggle} = useRestaurantDetails(
+    resInfo,
+    navigation,
+  );
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // Clear the restaurant details when component mounts
     dispatch(clearRestaurant());
 
-    // Set the new restaurant details
     if (resInfo) {
       dispatch(setRestaurant(resInfo.cards[2].card.card.info));
     }
 
-    // Cleanup when component unmounts or resId changes
     return () => {
       dispatch(clearRestaurant());
     };
   }, [resId, resInfo, dispatch]);
 
-  return !categoryListRef.current.length ? (
+  return !(resInfo && categories) ? (
     <RestaurantDetailsShimmerUI />
   ) : (
     <View className="flex-1">
       <RestaurantDetailsHeader resInfo={resInfo} />
       <Text className="text-center text-xl font-semibold text-black">Menu</Text>
       <RestaurantMenuList
-        categoryList={categoryListRef.current}
-        activeIndex={activeIndex}
-        setActiveIndex={(index: any) => setActiveIndexProps(index)}
+        categoryList={categories}
+        openCategories={openCategories}
+        handleToggle={handleToggle}
       />
       <CartInfoFooter />
     </View>

@@ -41,6 +41,7 @@
 - On any Restaurant's details page while selecting an item from that restaurant when cart is already there, then Show "ReplaceCartModal".
 - View Cart Design
 - CART FUNCTIONALITY :-
+
   - when click on ADD button, to console.log show res id and item name.
     console.log(resId, item?.card?.info?.name)
     ( LOG 284183 Jammu Poori, Aloo, Chana [2 Pcs])
@@ -50,19 +51,11 @@
   - When item, gets added from Restaurant Details Page, quantity information needs to be added.
   - Place order details according to quantity of items to be updated.
   - Refactoring the code
-  -TODO:creating APK
-  - TODO:updating screen recording (after creating apk)
+  - TODO:updating screen recording , screenshots , refactorng code, updatign readme
   - TODO: then push to main
-   
 
 ## Screenshots
-
-<img src="src/assets/1.png" alt="drawing" width="200"/>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <img src="src/assets/2.png" alt="drawing" width="200"/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="src/assets/3.png" alt="drawing" width="200"/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="src/assets/4.png" alt="drawing" width="200"/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <img src="src/assets/5.png" alt="drawing" width="200"/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="src/assets/6.png" alt="drawing" width="200"/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="src/assets/7.png" alt="drawing" width="200"/>
 
 ## Video recording till Restaurant Menu List Page
 
 https://github.com/chandana105/food-ordering-mobile-app/assets/39641650/04200459-fbb1-4729-8259-410e8afd1efa
-
-- TODO: FONT THEME NOT PUT TILL NOW , TO ADD IT
-- TODO: onRefresh of Flatlist (to fetch new list of restaurants if user wants) (HOME PAGE)
-- TODO: To show infinte number of rest's not only 10 (ie only of page1) (HOME PAGE)

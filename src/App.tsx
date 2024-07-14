@@ -17,7 +17,7 @@ export type RootStackParamList = {
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
-const Logo = () => <Image source={{uri: LOGO_URL}} className="w-10 h-10" />;
+const Logo = () => <Image source={LOGO_URL} className="w-10 h-10" />;
 
 const RestaurantLogo = (cloudinaryImageId: string) => (
   <Image

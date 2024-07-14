@@ -32,11 +32,9 @@ export default function Home({navigation}: HomeProps) {
     handleConfirmReplace,
   } = useHomeScreen(resList, setFilteredResList);
 
-  if (!resList.length) {
-    return <RestaurantListShimmerUI />;
-  }
-
-  return (
+  return !resList.length ? (
+    <RestaurantListShimmerUI />
+  ) : (
     <View className="flex-1">
       <SearchBar handleFilter={handleFilter} />
       <TouchableOpacity
@@ -47,7 +45,7 @@ export default function Home({navigation}: HomeProps) {
         </Text>
         {isFilterOn && (
           <TouchableOpacity className="  ml-3" onPress={handleCloseFilter}>
-            <Icon name="close-circle" size={20} color="#111" />
+            <Icon name="close-circle" size={20} color="#fff" />
           </TouchableOpacity>
         )}
       </TouchableOpacity>

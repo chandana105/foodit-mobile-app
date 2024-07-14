@@ -29,9 +29,7 @@ export default function SearchBar({handleFilter}: SearchBarProps) {
           <Icon name="close" size={25} color="#777" className="mr-2" />
         </Pressable>
       ) : (
-        <Pressable>
-          <Icon name="search" size={25} color="#777" className="" />
-        </Pressable>
+        <Icon name="search" size={25} color="#777" className="" />
       )}
     </View>
   );

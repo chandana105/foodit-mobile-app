@@ -1,55 +1,37 @@
-import {useEffect, useRef, useState} from 'react';
+import {useEffect, useState} from 'react';
 import {Platform} from 'react-native';
 
 const useRestaurantDetails = (resInfo: any, navigation: any) => {
-  let cardsIndex = 0;
-  if (Platform.OS === 'android') {
-    cardsIndex = 4;
-  } else if (Platform.OS === 'ios') {
-    cardsIndex = 5;
-  }
+  const cardsIndex = Platform.OS === 'android' ? 4 : 5;
 
-  const categoryListRef = useRef<any[]>([]);
-
-  const [activeIndex, setActiveIndex] = useState<number[]>([]);
+  const [openCategories, setOpenCategories] = useState<any>([]);
+  const [categories, setCategories] = useState<any>([]);
 
   useEffect(() => {
-    if (resInfo !== null) {
+    if (resInfo) {
       const {cloudinaryImageId} = resInfo?.cards[2]?.card?.card?.info;
+      navigation.setParams({cloudinaryImageId});
 
-      navigation.setParams({
-        cloudinaryImageId: cloudinaryImageId,
-      });
+      const allCategories = resInfo?.cards[
+        cardsIndex
+      ]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
+        (category: any) =>
+          category?.card?.card?.['@type'] ===
+          'type.googleapis.com/swiggy.presentation.food.v2.ItemCategory',
+      );
 
-      if (
-        categoryListRef.current.length !==
-        resInfo?.cards[cardsIndex]?.groupedCard?.cardGroupMap?.REGULAR?.cards
-          ?.length
-      ) {
-        categoryListRef.current = resInfo?.cards[
-          cardsIndex
-        ]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
-          (category: any) =>
-            category?.card?.card?.['@type'] ===
-            'type.googleapis.com/swiggy.presentation.food.v2.ItemCategory',
-        );
-
-        setActiveIndex(
-          Array.from({length: categoryListRef.current.length}, (_, i) => i),
-        );
-      }
+      setCategories(allCategories);
+      setOpenCategories(new Array(allCategories.length).fill(true));
     }
-  }, [navigation, resInfo, cardsIndex]);
+  }, [resInfo, navigation, cardsIndex]);
 
-  const setActiveIndexProps = (index: number) => {
-    if (activeIndex.includes(index)) {
-      setActiveIndex(activeIndex.filter(i => i !== index));
-    } else {
-      setActiveIndex([...activeIndex, index]);
-    }
+  const handleToggle = (index: any) => {
+    setOpenCategories((prev: any) =>
+      prev.map((isOpen: any, i: any) => (i === index ? !isOpen : isOpen)),
+    );
   };
 
-  return {categoryListRef, activeIndex, setActiveIndexProps};
+  return {openCategories, categories, handleToggle};
 };
 
 export default useRestaurantDetails;

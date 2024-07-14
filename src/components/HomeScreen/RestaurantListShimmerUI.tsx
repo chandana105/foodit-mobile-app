@@ -2,10 +2,9 @@ import {FlatList, StyleSheet, View} from 'react-native';
 import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 import {createShimmerPlaceholder} from 'react-native-shimmer-placeholder';
+import {shimmerColors} from '../../utils/constants';
 
 const ShimmerPlaceHolder = createShimmerPlaceholder(LinearGradient);
-
-const shimmerColors = ['#e2e8f0', '#cbd5e1', '#cbd5e9'];
 
 export default function RestaurantListShimmerUI() {
   return (

@@ -4,7 +4,7 @@ import RestaurantMenuListItems from './RestaurantMenuListItems';
 import Icon from 'react-native-vector-icons/AntDesign';
 
 const RestaurantMenuList = memo(
-  ({categoryList, activeIndex, setActiveIndex}: any) => {
+  ({categoryList, openCategories, handleToggle}: any) => {
     return (
       <FlatList
         data={categoryList}
@@ -14,24 +14,22 @@ const RestaurantMenuList = memo(
         renderItem={({item, index}) => (
           <View
             key={item?.card?.card.title}
-            className="my-2 px-3 py-4 flex-col justify-between rounded-md bg-white  ">
+            className="my-2 px-3 py-4 flex-col justify-between rounded-md bg-white">
             <Pressable
-              className="flex-row justify-between items-center "
-              onPress={() => setActiveIndex(index)}>
-              <Text className="text-2xl text-black font-bold  flex-1">
+              className="flex-row justify-between items-center"
+              onPress={() => handleToggle(index)}>
+              <Text className="text-2xl text-black font-bold flex-1">
                 {item?.card?.card.title} ({item?.card?.card.itemCards.length}){' '}
               </Text>
               <Text className="text-lg">
-                {activeIndex.includes(index) ? (
+                {openCategories[index] ? (
                   <Icon name="up" size={25} color="#000" />
                 ) : (
                   <Icon name="down" size={25} color="#000" />
                 )}
               </Text>
             </Pressable>
-            {activeIndex.includes(index) && (
-              <RestaurantMenuListItems item={item} />
-            )}
+            {openCategories[index] && <RestaurantMenuListItems item={item} />}
           </View>
         )}
       />

@@ -7,6 +7,7 @@ import {RootState} from '../../store/appStore';
 import CartReplaceModal from './CartReplaceModal';
 import useMenuListItem from '../../hooks/useMenuListItem';
 import QuantityComponent from './QuantityComponent';
+import {menuListItemFormatPrice} from '../../utils/helper';
 
 const MenuListItem = memo(({item}: any) => {
   const {
@@ -27,11 +28,6 @@ const MenuListItem = memo(({item}: any) => {
     (state: RootState) => state?.restaurant?.restaurant,
   );
 
-  // Format price function
-  const formatPrice = (price: number) => {
-    return (price / 100).toFixed(2);
-  };
-
   return (
     <>
       <View className="flex-row rounded-lg h-auto py-4 gap-4">
@@ -43,8 +39,8 @@ const MenuListItem = memo(({item}: any) => {
           <Text className="font-bold text-black text-base">
             ₹
             {item.card.info.price
-              ? formatPrice(item.card.info.price)
-              : formatPrice(item.card.info.defaultPrice)}
+              ? menuListItemFormatPrice(item.card.info.price)
+              : menuListItemFormatPrice(item.card.info.defaultPrice)}
           </Text>
 
           {item.card.info.ratings.aggregatedRating?.rating && (
@@ -80,7 +76,7 @@ const MenuListItem = memo(({item}: any) => {
 
         {/* Second view */}
         {item?.card?.info?.imageId ? (
-          <View>
+          <View className="relative">
             <Image
               source={{
                 uri: `${CDN_URL}${item?.card?.info?.imageId}`,

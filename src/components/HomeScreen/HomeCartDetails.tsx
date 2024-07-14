@@ -6,6 +6,7 @@ import {NavigationProp, useNavigation} from '@react-navigation/native';
 import {RootStackParamList} from '../../App';
 import {useSelector} from 'react-redux';
 import {RootState} from '../../store/appStore';
+import {calculateTotalQuantity} from '../../utils/helper';
 
 type HomeCartDetailsProps = PropsWithChildren<{
   toggleModal: () => void;
@@ -16,10 +17,7 @@ export default function HomeCartDetails({toggleModal}: HomeCartDetailsProps) {
 
   const cart = useSelector((state: RootState) => state?.cart);
 
-  const totalQuantity = cart.items.reduce(
-    (acc, item) => acc + item.quantity,
-    0,
-  );
+  const totalQuantity = calculateTotalQuantity(cart.items);
 
   if (totalQuantity === 0) {
     return null;
@@ -54,7 +52,7 @@ export default function HomeCartDetails({toggleModal}: HomeCartDetailsProps) {
         onPress={() => navigation.navigate('Cart')}>
         <Text className="text-white font-semibold text-base">
           {totalQuantity} {totalQuantity > 1 ? 'Items' : 'Item'} | ₹
-          {cart?.orderTotal}
+          {cart.orderTotal.toFixed(2)}
         </Text>
         <Text className="text-white font-bold text-base">Checkout</Text>
       </Pressable>

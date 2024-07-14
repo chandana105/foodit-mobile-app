@@ -4,6 +4,7 @@ import {useDispatch} from 'react-redux';
 import {CDN_URL} from '../../utils/constants';
 import {incrementQuantity, decrementQuantity} from '../../store/cartSlice';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import {cartItemsFormatPrice} from '../../utils/helper';
 
 export default function CartItems({item}: any) {
   const dispatch = useDispatch();
@@ -17,10 +18,6 @@ export default function CartItems({item}: any) {
 
   const handleDecrement = () => {
     dispatch(decrementQuantity(info.id));
-  };
-
-  const formatPrice = (price: number) => {
-    return (Math.round(price * 100) / 100).toFixed(2);
   };
 
   return (
@@ -59,7 +56,10 @@ export default function CartItems({item}: any) {
       <Text
         className="text-black text-base font-semibold ml-3"
         style={styles.priceView}>
-        ₹{formatPrice(((info?.price || info?.defaultPrice) / 100) * quantity)}
+        ₹
+        {cartItemsFormatPrice(
+          ((info?.price || info?.defaultPrice) / 100) * quantity,
+        )}
       </Text>
     </View>
   );
