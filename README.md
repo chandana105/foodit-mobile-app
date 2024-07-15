@@ -48,3 +48,16 @@ Foodit is a mobile application designed to streamline the food ordering process,
 - Shimmer UI : Provides loading placeholders for both the restaurant list and restaurant menu pages.
 
 ## Screenshots
+<img width="200" alt="Screenshot 2024-07-15 at 12 22 37 PM" src="https://github.com/user-attachments/assets/74d061ba-f120-4162-824c-addfd2e2d560"> &nbsp;
+<img width="200" alt="Screenshot 2024-07-15 at 12 23 04 PM" src="https://github.com/user-attachments/assets/521374f3-ac7b-4b10-a686-fd413761f148"> &nbsp;
+<img width="200" alt="Screenshot 2024-07-15 at 12 23 29 PM" src="https://github.com/user-attachments/assets/4f86c555-c22c-46d0-89e4-dc9fd19c7c61"> &nbsp;
+<img width="200" alt="Screenshot 2024-07-15 at 12 25 27 PM" src="https://github.com/user-attachments/assets/4fccc889-497a-43b3-9351-0c58820f8d2e"> &nbsp; &nbsp;
+
+<img width="200" alt="Screenshot 2024-07-15 at 12 25 43 PM" src="https://github.com/user-attachments/assets/4010fde8-a74c-4d01-acdb-e91382dd3ca1"> &nbsp;
+<img width="200" alt="Screenshot 2024-07-15 at 12 26 03 PM" src="https://github.com/user-attachments/assets/5cd3deb1-fb34-450c-bc0d-232ed4dba80c"> &nbsp;
+<img width="200" alt="Screenshot 2024-07-15 at 12 26 23 PM" src="https://github.com/user-attachments/assets/3d58ff1c-9081-46f7-9f3f-915231f36cf6"> &nbsp;
+<img width="200" alt="Screenshot 2024-07-15 at 12 27 15 PM" src="https://github.com/user-attachments/assets/96166f3d-d375-4636-863a-5d2dd22538c7"> &nbsp;
+
+
+
+
