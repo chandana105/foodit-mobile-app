@@ -1,61 +1,50 @@
-# Features
+# Foodit - Food Ordering Mobile Application
 
-- navigation (stack)
+Foodit is a mobile application designed to streamline the food ordering process, providing users with an intuitive and seamless experience for browsing, selecting, and ordering from a variety of restaurants. Leveraging the power of React Native, Redux Toolkit, and NativeWind, Foodit ensures smooth navigation, efficient state management, and visually appealing styling. The app features comprehensive restaurant listings, detailed menu displays, and a robust cart system, all while maintaining a user-friendly interface for optimal performance and usability.
 
-### home page :-
+## Tech Stack
 
-- home page of all food items list
-- header ( title and left and right btn )
-- search bar designing
-- top rated filter button designing
-- Dummy flatlist of all restaurnats list on restaurnats list page
-- fetching list of restaurants from api (for different platform api havign different structure)
-- Shimmer UI (whole restaurant list page will be visible after restaurant list from api is being fetched)
-- Search Filter list
-- Top Rated Restaurants Filter list
-- HOC VEG restaurant
-- cuisines display in slice
-- if no filtered / resList length is 0 in starting or on fitlers :- display No Restaurants Text.
+- React Native: Provides a framework for building the mobile application.
+- React Navigation: Enables seamless navigation throughout the app. (stack navigation)
+- Redux Toolkit: Facilitates efficient state management within the application.
+- NativeWind: Simplifies the styling of components using utility classes similar to TailwindCSS.
+- TailwindCSS: Provides a utility-first CSS framework for quickly styling components (used with NativeWind).
+- React Native Vector Icons: Provides a library of icons for use in the application.
+- React Native Linear Gradient: Allows for the creation of gradient backgrounds and other effects.
+- React Native Modal: Provides customizable modal components.
+- React Native Shimmer Placeholder: Adds shimmer effects to placeholder components during content loading.
 
-### restaurant Details page :-
+## Features
 
-- fetching restaurant menu details using resId (useRestaurantMenu)
-- setting up the header menu icon on top of resDetails page
-- make a header type design for particular restaurant detail (resInfo card)
-- Menu display (menu categories)
-  - creating flatlist for each menu category with item seperator as a line
-    - menu category item will be card similar as detailed header
-  - that menu category list should be toggled (open and close)
-  - then same as all menu categories list should be rendered
-  - Restaurant Menu Page Shimmer UI
+- #### Restaurants Listing Page :
 
-### Cart Page
+  - Display All Restaurants: Fetches and displays all restaurants using the FlatList component, differentiating between veg and non-veg restaurants with Higher Order Components (HOCs).
+  - Search Filter: Enables searching for restaurants based on name.
+  - Top Rated Restaurant Filter: Filter to show top-rated restaurants.
+  - Home Cart Info Details : Displays cart details on the home page with restaurant information.
+  - Clear Cart Modal: Modal to clear all items in the cart.
 
-- on click of Add Button in Restaurant Menu List page :-
-  - Designing "1 item added" component for a particular restaurant where the add button is clicked. It should be above the scrolling Flatlist as behind that component the list should be able to get scrolled.
-  - can think of adding Animation while adding item (OPTIONAL)
-- On Home Page (need to show the cart items added)
-  - to make the cartInfo box with different styles here also.
-  - (can hide above box when scrolling down and show when scrolling up on Home Page) (OPTIONAL)
-- On Home Page :- "CartDeleteModal"
-- On any Restaurant's details page while selecting an item from that restaurant when cart is already there, then Show "ReplaceCartModal".
-- View Cart Design
-- CART FUNCTIONALITY :-
+- #### Restaurant Menu Page :-
 
-  - when click on ADD button, to console.log show res id and item name.
-    console.log(resId, item?.card?.info?.name)
-    ( LOG 284183 Jammu Poori, Aloo, Chana [2 Pcs])
-  - item added to cart, cart header, cart items and cart footer shown.
-  - All cart Info footer and cart details footer at Home and RestaurantDetails page update with cart Info
-  - All cart Modals update with cart info and functionality
-  - When item, gets added from Restaurant Details Page, quantity information needs to be added.
-  - Place order details according to quantity of items to be updated.
-  - Refactoring the code
-  - TODO:updating screen recording , screenshots , refactorng code, updatign readme
-  - TODO: then push to main
+  - Restaurant Description: Displays the information about the restaurant.
+  - Menu Categories: Renders the restaurant's menu with different categories using FlatList.
+  - Truncated Description: Shows a shortened version of the menu item descriptions, with the option to toggle to view the full description of menu item.
+  - Category Toggle: Toggles the visibility of menu categories.
+  - Add to Cart: Add items to the cart.
+  - Remove from Cart: Remove items from the cart.
+  - Adjust Quantity: Increases or decreases the quantity of items in the cart.
+  - Cart Info Footer: Displays the number of items in the cart and provides a link to navigate to the cart page.
+  - Replace Cart Item Modal: Modal to replace items in the cart.
+
+- #### Cart Page
+
+  - Modal Display: Shows the cart page as a modal using stack navigation.
+  - Cart Header: Displays restaurant information.
+  - Cart Items: Displays the total items in the cart for a particular restaurant using FlatList, including menu item information, quantity, and calculated price according to quantity.
+  - Cart Footer: Displays the total order amount based on a dummy delivery fee.
+
+- Redux Store :- Efficiently manages cart information, handling all CRUD operations and maintaining restaurants information.
+- Ensured clean and readable code by separating concerns and implementing custom hooks for various logic and features,
+- Shimmer UI : Provides loading placeholders for both the restaurant list and restaurant menu pages.
 
 ## Screenshots
-
-## Video recording till Restaurant Menu List Page
-
-https://github.com/chandana105/food-ordering-mobile-app/assets/39641650/04200459-fbb1-4729-8259-410e8afd1efa
