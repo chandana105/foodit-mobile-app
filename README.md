@@ -48,6 +48,7 @@ Foodit is a mobile application designed to streamline the food ordering process,
 - Shimmer UI : Provides loading placeholders for both the restaurant list and restaurant menu pages.
 
 ## Screenshots
+
 <img width="200" alt="Screenshot 2024-07-15 at 12 22 37 PM" src="https://github.com/user-attachments/assets/74d061ba-f120-4162-824c-addfd2e2d560"> &nbsp;
 <img width="200" alt="Screenshot 2024-07-15 at 12 23 04 PM" src="https://github.com/user-attachments/assets/521374f3-ac7b-4b10-a686-fd413761f148"> &nbsp;
 <img width="200" alt="Screenshot 2024-07-15 at 12 23 29 PM" src="https://github.com/user-attachments/assets/4f86c555-c22c-46d0-89e4-dc9fd19c7c61"> &nbsp;
